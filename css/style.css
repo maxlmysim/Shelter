@@ -171,6 +171,7 @@ h5 {
 
 .main__start-screen {
     background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+    margin-bottom: 80px;
 }
 
 .start-screen-container {
@@ -195,9 +196,47 @@ h5 {
 
 .start-screen__puppy {
     margin-top: 180px;
+    width: 698px;
+    height: 728px;
 }
 
 /*end styles start-screen*/
+
+
+/*start styles about*/
+
+.main__about {
+    margin-bottom: 100px;
+}
+
+.about__container {
+    display: flex;
+    gap: 120px;
+    justify-content: center;
+}
+
+.about__pets {
+    width: 300px;
+    height: 408px;
+}
+
+.about__content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 430px;
+}
+
+.about__heading {
+    color: #545454;
+}
+
+.about__subheading {
+    color: #4C4C4C;
+}
+
+
+/*end styles about*/
 
 
 /*end styles main*/
