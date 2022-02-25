@@ -110,6 +110,7 @@ h5 {
     font-weight: normal;
     font-size: 17px;
     line-height: 130%;
+    letter-spacing: 0.06em;
     color: #292929;
 }
 
@@ -120,12 +121,12 @@ h5 {
 
 .switch {
     padding: 0;
-    width: 52px;
+    width: 63px;
     height: 52px;
     border: 2px solid #F1CDB3;
     border-radius: 100px;
     background: rgba(255, 255, 255, 0);
-    font-weight: 900;
+    margin-bottom: -30px;
 }
 
 .switch:hover {
@@ -137,17 +138,17 @@ h5 {
     position: absolute;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 60px;
     max-width: 1200px;
     width: 100%;
-    padding-left: 40px;
     margin-top: 60px;
+    margin-left:41px;
 }
 
 .header__logo {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .logo__title {
@@ -156,7 +157,7 @@ h5 {
     font-weight: normal;
     font-size: 32px;
     line-height: 35px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.06em;
     color: #F1CDB3;
     margin-bottom: 10px;
 }
@@ -171,6 +172,7 @@ h5 {
     align-items: center;
     letter-spacing: 0.1em;
     color: #FFFFFF;
+    padding-left:3px;
 }
 
 .header__nav-menu {
@@ -180,6 +182,7 @@ h5 {
 .nav-menu__list {
     display: flex;
     gap: 35px;
+    margin-right:3px;
 }
 
 .nav-menu__item.active, .nav-menu__item:hover {
@@ -202,6 +205,7 @@ h5 {
 
 .start-screen-container {
     display: flex;
+    gap: 42px;
 }
 
 .start-screen__content {
@@ -249,17 +253,19 @@ h5 {
 .about__content {
     display: flex;
     flex-direction: column;
-    gap: 25px;
     width: 430px;
+    padding-top: 14px;
 }
 
 .about__heading {
     color: #545454;
     width: 370px;
+    margin-bottom: 25px;
 }
 
 .about__subheading {
     color: #4C4C4C;
+    margin-bottom: 25px;
 }
 
 /*end styles about*/
@@ -268,7 +274,7 @@ h5 {
 
 .main__pets {
     background: #F6F6F6;
-    padding-top: 80px;
+    padding-top: 70px;
     padding-bottom: 100px;
 }
 
@@ -280,8 +286,11 @@ h5 {
 }
 
 .pets__heading {
-    width: 400px;
+    width: 480px;
     color: #545454;
+    text-align: center;
+    margin-right: 50px;
+    margin-top: -1px;
 }
 
 .pets__slider {
@@ -289,6 +298,15 @@ h5 {
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    gap: 53px;
+}
+
+.slider__pets-cards {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    gap: 90px;
 }
 
 
@@ -310,8 +328,10 @@ h5 {
 }
 
 .pets-card__more {
+    padding-top: 15px;
     background: rgba(255, 255, 255, 0);
     border: 2px solid #F1CDB3;
+    margin-bottom: 30px;
 }
 
 .pets_primary {
@@ -371,17 +391,20 @@ h5 {
 
 .main__donation {
     background: #F6F6F6;
-    padding-top: 80px;
+    padding-top: 78px;
     padding-bottom: 100px;
 }
 
 .donation__container {
     display: flex;
     gap: 30px;
+    justify-content: center;
 }
 
 .donation__img {
     max-width: 505px;
+    max-height: 261px;
+    margin-top: 9px;
 }
 
 .donation__content {
@@ -425,3 +448,79 @@ h5 {
 /*end styles donation*/
 
 /*end styles main*/
+
+/*start styles footer*/
+
+.footer__background {
+    background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+    padding-top: 40px;
+}
+
+.footer__container {
+    display: flex;
+    /*justify-content: space-between;*/
+    gap: 160px;
+}
+
+.footer__contacts,
+.footer__locations {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 15px;
+}
+
+.footer__locations {
+    gap: 35px;
+}
+
+.footer__locations {
+    margin-left: -15px;
+}
+
+.footer__locations {
+    max-width: 305px;
+}
+
+.contacts__title,
+.locations__title {
+   color: #FFFFFF;
+    letter-spacing: 0.054em;
+}
+
+.contacts__mail,
+.contacts__phone,
+.locations__boston,
+.locations__london {
+    display: flex;
+    gap: 20px;
+}
+
+.mail__icon,
+.phone__icon {
+    width: 40px;
+    height: 32px;
+}
+
+.mail__address-text,
+.phone__number-text,
+.locations__address {
+    color: #F1CDB3;
+}
+
+.locations__icon {
+    width: 22px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__img {
+    max-width: 300px;
+    height: 100%;
+}
+
+/*end styles footer*/
+
+
