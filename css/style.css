@@ -292,8 +292,6 @@ h5 {
 }
 
 
-
-
 .slider__pets-card {
     display: flex;
     flex-direction: column;
@@ -316,12 +314,114 @@ h5 {
     border: 2px solid #F1CDB3;
 }
 
-
-
 .pets_primary {
 }
 
 /*end styles pets*/
 
+/*start styles help*/
+
+
+.main__help {
+}
+
+.help__content {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.help__heading {
+    max-width: 310px;
+    color: #545454;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.help__list {
+    display: flex;
+    column-gap: 120px;
+    row-gap: 55px;
+    flex-wrap: wrap;
+    max-width: 1040px;
+    justify-content: space-evenly;
+}
+
+.help__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.help__item-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+.help__item-title {
+    color: #545454;
+}
+
+/*end styles help*/
+
+/*start styles donation*/
+
+.main__donation {
+    background: #F6F6F6;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.donation__container {
+    display: flex;
+    gap: 30px;
+}
+
+.donation__img {
+    max-width: 505px;
+}
+
+.donation__content {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.donation__heading {
+    color: #545454;
+    max-width: 300px;
+}
+
+.donation__subheading {
+    color: #545454;
+}
+
+.donation__credit-card {
+    width: 350px;
+    display: flex;
+    gap: 15px;
+    background: #F1CDB3;
+    padding: 10px 15px;
+    border-radius: 9px;
+}
+
+.credit-card__svg {
+    width: 30px;
+    height: 23px;
+}
+
+.credit-card__number {
+    color: #545454;
+}
+
+.donation__description {
+    color: #B2B2B2
+}
+
+/*end styles donation*/
 
 /*end styles main*/
