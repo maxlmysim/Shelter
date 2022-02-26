@@ -118,7 +118,6 @@ h5 {
     background: #FDDCC4;
 }
 
-
 .switch {
     padding: 0;
     width: 63px;
@@ -133,6 +132,7 @@ h5 {
 }
 
 /*start styles header*/
+
 .header {
     position: absolute;
     display: flex;
@@ -174,10 +174,6 @@ h5 {
     padding-left:3px;
 }
 
-.header__nav-menu {
-
-}
-
 .nav-menu__list {
     display: flex;
     gap: 35px;
@@ -195,6 +191,7 @@ h5 {
 /*end styles header*/
 
 /*start styles main*/
+
 /*start styles start-screen*/
 
 .main__start-screen {
@@ -233,7 +230,6 @@ h5 {
 }
 
 /*end styles start-screen*/
-
 
 /*start styles about*/
 
@@ -335,16 +331,9 @@ h5 {
     margin-bottom: 30px;
 }
 
-.pets_primary {
-}
-
 /*end styles pets*/
 
 /*start styles help*/
-
-
-.main__help {
-}
 
 .help__content {
     margin-top: 80px;
@@ -465,9 +454,9 @@ h5 {
 }
 
 .footer__container {
-    display: flex;
-    /*justify-content: space-between;*/
-    gap: 160px;
+    display: grid;
+    grid-gap: 140px;
+    grid-template-columns: 300px 320px 300px
 }
 
 .footer__contacts,
@@ -483,17 +472,12 @@ h5 {
 }
 
 .footer__locations {
-    margin-left: -15px;
-}
-
-.footer__locations {
     max-width: 305px;
 }
 
 .contacts__title,
 .locations__title {
    color: #FFFFFF;
-    letter-spacing: 0.054em;
 }
 
 .contacts__mail,
@@ -526,10 +510,31 @@ h5 {
 
 .footer__img {
     max-width: 300px;
-    height: 100%;
 }
 
 /*end styles footer*/
 
+@media screen and (max-width: 1270px) {
+    .header {
+        max-width: 95vw;
+        margin-left: 15px;
+    }
 
+    .start-screen-container {
+        grid-gap: 0;
+    }
+
+    .start-screen__content {
+        padding-left: 15px;
+        margin-top: 28vw;
+
+    }
+
+    .start-screen__puppy {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+}
 
