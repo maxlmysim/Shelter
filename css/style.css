@@ -203,8 +203,12 @@ h5 {
 }
 
 .start-screen-container {
-    display: flex;
-    gap: 42px;
+    display: grid;
+    grid-gap: 42px;
+}
+
+.start-screen-container {
+    grid-template-columns: minmax(330px, 1fr) minmax(auto, 698px);
 }
 
 .start-screen__content {
@@ -214,19 +218,18 @@ h5 {
 .start-screen__heading {
     color: #FFFFFF;
     margin-bottom: 42px;
-    width: 310px;
+    max-width: 310px;
     letter-spacing: 0;
 }
 
 .start-screen__subheading {
-    width: 460px;
+    max-width: 460px;
     margin-bottom: 42px;
 }
 
 .start-screen__puppy {
     margin-top: 180px;
-    width: 698px;
-    height: 728px;
+    max-width: 698px;
 }
 
 /*end styles start-screen*/
@@ -305,7 +308,7 @@ h5 {
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    gap: 90px;
+    gap: 15px;
 }
 
 
@@ -319,7 +322,6 @@ h5 {
 
 .pets-card__photo {
     width: 270px;
-    height: 270px;
 }
 
 .pets-card__title {
@@ -528,5 +530,6 @@ h5 {
 }
 
 /*end styles footer*/
+
 
 
