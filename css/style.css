@@ -126,7 +126,6 @@ h5 {
     border: 2px solid #F1CDB3;
     border-radius: 100px;
     background: rgba(255, 255, 255, 0);
-    margin-bottom: -30px;
 }
 
 .switch:hover {
@@ -365,8 +364,15 @@ h5 {
     column-gap: 120px;
     row-gap: 55px;
     flex-wrap: wrap;
-    max-width: 1040px;
+    max-width: 1030px;
     justify-content: space-evenly;
+}
+
+.help__list-items {
+    display: flex;
+    justify-content: space-between;
+    max-width: 858px;
+    width: 100%;
 }
 
 .help__item {
