@@ -552,8 +552,17 @@ h5 {
 }
 
 @media screen and (max-width: 980px) {
+    .nav-menu__list{
+        margin: 0 30px;
+    }
     .slider__pets-card:last-child {
         display: none;
+    }
+
+    .about__container {
+    flex-direction: column-reverse;
+        align-items: center;
+        gap: 80px;
     }
 
     .donation__container{
