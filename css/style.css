@@ -455,7 +455,7 @@ h5 {
 
 .footer__container {
     display: grid;
-    grid-gap: 140px;
+    justify-content: space-between;;
     grid-template-columns: 300px 320px 300px
 }
 
@@ -536,5 +536,8 @@ h5 {
         max-height: 100%;
     }
 
+    .footer__container {
+        padding-left: 15px;
+    }
 }
 
