@@ -142,7 +142,7 @@ h5 {
     max-width: 1200px;
     width: 100%;
     margin-top: 60px;
-    margin-left:41px;
+    margin-left: 41px;
 }
 
 .header__logo {
@@ -171,13 +171,13 @@ h5 {
     align-items: center;
     letter-spacing: 0.1em;
     color: #FFFFFF;
-    padding-left:3px;
+    padding-left: 3px;
 }
 
 .nav-menu__list {
     display: flex;
     gap: 35px;
-    margin-right:3px;
+    margin-right: 3px;
 }
 
 .nav-menu__item.active, .nav-menu__item:hover {
@@ -356,15 +356,9 @@ h5 {
     row-gap: 55px;
     flex-wrap: wrap;
     max-width: 1030px;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
-.help__list-items {
-    display: flex;
-    justify-content: space-between;
-    max-width: 858px;
-    width: 100%;
-}
 
 .help__item {
     display: flex;
@@ -396,12 +390,12 @@ h5 {
     display: flex;
     gap: 30px;
     justify-content: center;
+    align-items: center;
 }
 
 .donation__img {
     max-width: 505px;
     max-height: 261px;
-    margin-top: 9px;
 }
 
 .donation__content {
@@ -455,8 +449,9 @@ h5 {
 
 .footer__container {
     display: grid;
-    justify-content: space-between;;
-    grid-template-columns: 300px 320px 300px
+    justify-content: space-between;
+    grid-template-columns: 300px 320px 300px;
+    grid-template-areas: "contacts location puppy"
 }
 
 .footer__contacts,
@@ -465,19 +460,22 @@ h5 {
     flex-direction: column;
     gap: 40px;
     margin-top: 15px;
+    max-height: 234px;
+}
+
+.footer__contacts {
+    grid-area: contacts;
 }
 
 .footer__locations {
+    grid-area: location;
     gap: 35px;
-}
-
-.footer__locations {
     max-width: 305px;
 }
 
 .contacts__title,
 .locations__title {
-   color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 .contacts__mail,
@@ -510,6 +508,7 @@ h5 {
 
 .footer__img {
     max-width: 300px;
+    grid-area: puppy;
 }
 
 /*end styles footer*/
@@ -536,8 +535,48 @@ h5 {
         max-height: 100%;
     }
 
+    .pets__slider{
+
+        /*padding: 0 30px;*/
+    }
+    .help__item {
+        width: 170px;
+    }
+    .help__list{
+        margin: 0 15px;
+    }
+
     .footer__container {
         padding-left: 15px;
     }
 }
 
+@media screen and (max-width: 980px) {
+    .slider__pets-card:last-child {
+        display: none;
+    }
+
+    .donation__container{
+        flex-direction: column-reverse;
+    }
+
+    .footer__container {
+        grid-template-rows: 234px 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "contacts location"
+                             "puppy    puppy";
+        justify-items: center;
+        column-gap: 60px;
+        row-gap: 65px;
+    }
+
+    .footer__img {
+        grid-column-start: span 2;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .pets__slider{
+        gap: 12px;
+    }
+}
