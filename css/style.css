@@ -178,6 +178,7 @@ h5 {
     display: flex;
     gap: 35px;
     margin-right: 3px;
+
 }
 
 .nav-menu__item.active, .nav-menu__item:hover {
@@ -535,14 +536,16 @@ h5 {
         max-height: 100%;
     }
 
-    .pets__slider{
+    .pets__slider {
 
-        /*padding: 0 30px;*/
+        padding: 0 30px;
     }
+
     .help__item {
         width: 170px;
     }
-    .help__list{
+
+    .help__list {
         margin: 0 15px;
     }
 
@@ -552,20 +555,17 @@ h5 {
 }
 
 @media screen and (max-width: 980px) {
-    .nav-menu__list{
-        margin: 0 30px;
-    }
     .slider__pets-card:last-child {
         display: none;
     }
 
     .about__container {
-    flex-direction: column-reverse;
+        flex-direction: column-reverse;
         align-items: center;
-        gap: 80px;
+        gap: 55px;
     }
 
-    .donation__container{
+    .donation__container {
         flex-direction: column-reverse;
     }
 
@@ -585,7 +585,100 @@ h5 {
 }
 
 @media screen and (max-width: 850px) {
-    .pets__slider{
+    .header {
+        margin: 30px 0 30px 30px;
+        width: auto;
+    }
+
+    .nav-menu__list {
+        margin-left: 80px;
+    }
+
+    .main__start-screen {
+        padding-top: 150px;
+    }
+
+    .start-screen-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 322px 1fr;
+        justify-items: center;
+        gap: 100px;
+    }
+
+    .start-screen__content {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .start-screen__heading {
+        margin-left: -150px;
+    }
+
+    .start-screen__puppy {
+        margin-top: 0;
+        margin-left: 140px;
+        width: 74%;
+    }
+
+    .about__content {
+        padding: 0;
+    }
+
+    .main__pets {
+       padding-top: 80px;
+    }
+
+    .pets__heading {
+        margin: 0;
+    }
+
+
+    .pets__slider {
         gap: 12px;
     }
+
+    .help__list {
+        column-gap: 60px;
+    }
+
+    .donation__container {
+        gap: 60px;
+    }
+
+    .footer__background {
+        padding-top: 30px;
+    }
+
+    .footer__container{
+        padding: 0;
+        margin: 0 64px;
+        column-gap: 37px;
+    }
+
+    .footer__contacts,
+    .footer__locations {
+        margin: 0;
+        gap: 42px;
+    }
+
+    .phone__icon {
+        margin-top: -6px;
+    }
+
+    .footer__locations {
+        gap: 30px;
+    }
+
+    .locations__boston .locations__icon {
+        margin-top: 7px;
+    }
+
+    .locations__boston .locations__address{
+        margin-bottom: 8px;
+    }
+
+
 }
