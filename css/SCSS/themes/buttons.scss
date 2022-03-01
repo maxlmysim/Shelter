@@ -1,0 +1,27 @@
+.btn {
+  padding: 15px 45px;
+  height: 52px;
+  border-radius: 100px;
+  border: 0;
+  background: #F1CDB3;
+  @include font(Georgia);
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: $spacing;
+  color: $color-dark-3xl;
+  &:hover {
+    background: $color-primary-light;
+  }
+}
+
+.switch {
+  padding: 0;
+  width: 53px;
+  height: 53px;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0);
+  &:hover {
+    background: $color-primary-light;
+  }
+}
