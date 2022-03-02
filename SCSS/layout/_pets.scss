@@ -1,0 +1,143 @@
+.pets {
+  background: $color-light-l;
+  padding-top: 70px;
+  padding-bottom: 100px;
+
+  @media screen and (max-width: 850px) {
+    padding-top: 80px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding-top: 43px;
+    padding-bottom: 45px;
+  }
+}
+
+.pets {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+
+    @media screen and (max-width: 500px) {
+      gap: 40px;
+    }
+  }
+
+  .heading {
+    width: 480px;
+    color: $color-dark-l;
+    text-align: center;
+    margin-right: 50px;
+    margin-top: -1px;
+
+    @media screen and (max-width: 850px) {
+      margin: 0;
+    }
+
+    @media screen and (max-width: 500px) {
+      max-width: 290px;
+    }
+  }
+
+  .slider {
+    display: grid;
+    grid-template-columns: 1fr minmax(280px, 990px) 1fr;
+    width: 100%;
+    gap: 52px;
+    align-items: center;
+
+    .pets-cards {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      gap: 15px;
+
+      @media screen and (max-width: 980px) {
+        justify-content: center;
+        gap: 43px;
+      }
+
+      @media screen and (max-width: 760px) {
+        justify-content: center;
+      }
+
+      @media screen and (max-width: 500px) {
+        grid-area: card;
+        gap: 0;
+      }
+    }
+
+    @media screen and (max-width: 1270px) {
+      padding: 0 30px;
+    }
+
+    @media screen and (max-width: 850px) {
+      gap: 12px;
+    }
+
+    @media screen and (max-width: 500px) {
+      grid-template-columns: 1fr 0 1fr;
+      grid-template-rows: 435px 53px;
+      grid-template-areas: "card       card    card"
+                           "arrow-left   .     arrow-right ";
+      justify-items: center;
+      padding: 0;
+      row-gap: 20px;
+      column-gap: 0;
+    }
+  }
+}
+
+.pets-card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  background: $color-light-s;
+  grid-area: card;
+
+  .button {
+    padding-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  &:last-child {
+    @media screen and (max-width: 980px) {
+      display: none;
+    }
+  }
+
+  &:nth-child(2) {
+    @media screen and (max-width: 760px) {
+      display: none;
+    }
+  }
+}
+
+.arrow-left {
+  @media screen and (max-width: 500px) {
+    grid-area: arrow-left;
+    margin-left: 17px;
+  }
+}
+
+.arrow-right {
+  @media screen and (max-width: 500px) {
+    grid-area: arrow-right;
+    margin-right: 17px;
+  }
+}
+
+.pets-card {
+  &__photo {
+    width: 270px;
+  }
+
+  &__title {
+    color: $color-dark-l;
+  }
+
+}
