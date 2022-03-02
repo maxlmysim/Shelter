@@ -1,0 +1,114 @@
+.start-screen {
+  background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  margin-bottom: 80px;
+
+  @media screen and (max-width: 850px) {
+    padding-top: 150px;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin-bottom: 40px;
+  }
+}
+
+.start-screen {
+  &__container {
+    display: grid;
+    grid-gap: 42px;
+    grid-template-columns: minmax(330px, 1fr) minmax(auto, 698px);
+
+    @media screen and (max-width: 1270px) {
+      grid-gap: 0;
+    }
+
+    @media screen and (max-width: 850px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 322px 1fr;
+      justify-items: center;
+      gap: 100px;
+    }
+
+    @media screen and (max-width: 760px) {
+      gap: 105px;
+    }
+
+    @media screen and (max-width: 500px) {
+      gap: 80px;
+    }
+  }
+
+  .content {
+    margin-top: 343px;
+
+    @media screen and (max-width: 1270px) {
+      padding-left: 15px;
+      margin-top: 28vw;
+    }
+
+    @media screen and (max-width: 850px) {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 500px) {
+      max-width: 93.75vw;
+    }
+  }
+
+  .heading,
+  .subheading {
+    @media screen and (max-width: 500px) {
+      text-align: center;
+    }
+  }
+
+  .heading {
+    color: $color-light-xl;
+    margin-bottom: 42px;
+    max-width: 310px;
+    letter-spacing: 0;
+
+    @media screen and (max-width: 850px) {
+      margin-left: -150px;
+    }
+
+    @media screen and (max-width: 500px) {
+      margin-left: 0;
+      max-width: 250px;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  .subheading {
+    max-width: 460px;
+    margin-bottom: 42px;
+  }
+
+  &__puppy {
+    margin-top: 180px;
+    max-width: 698px;
+
+    @media screen and (max-width: 1270px) {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    @media screen and (max-width: 850px) {
+      margin-top: 0;
+      margin-left: 140px;
+      width: 74%;
+    }
+
+    @media screen and (max-width: 760px) {
+      margin-left: 40px;
+    }
+
+    @media screen and (max-width: 500px) {
+      width: 87%;
+    }
+  }
+}

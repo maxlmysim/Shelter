@@ -1,0 +1,73 @@
+h2 {
+  font-size: 4.4rem;
+  line-height: 130%;
+  color: #C4C4C4;
+}
+
+h3 {
+  font-size: 3.5rem;
+  line-height: 130%;
+  color: $color-dark-l;
+}
+
+.h3-mobile {
+  @media screen and (max-width: 500px) {
+    font-size: 2.5rem;
+    line-height: 130%;
+    text-align: center;
+  }
+}
+
+h4 {
+  font-size: 2rem;
+  line-height: 115%;
+}
+
+h5 {
+  font-size: 1.5rem;
+  line-height: 110%;
+}
+
+.h5-modal-window {
+  font-size: 1.5rem;
+  line-height: 110%;
+}
+
+.paragraph-l {
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  line-height: 160%;
+  color: $color-dark-s;
+
+  @media screen and (max-width: 500px) {
+    text-align: justify;
+  }
+}
+
+.paragraph-s {
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 150%;
+}
+
+.paragraph-mobile-menu {
+  @media screen and (max-width: $tablet-width) {
+    font-family: Arial, sans-serif;
+    font-size: 3.2rem;
+    line-height: 160%;
+  }
+}
+
+.logo__title {
+  font-size: 3.2rem;
+  line-height: 110%;
+
+}
+
+.logo__subtitle {
+  font-family: Arial, sans-serif;
+  font-size: 1.3rem;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+}
