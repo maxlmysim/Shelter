@@ -1,20 +1,19 @@
-@import "./reset/reset";
-@import "themes/colors";
-@import "themes/text-styles";
-@import "themes/buttons";
+// abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
-html {
-  box-sizing: border-box;
-}
+//base
+@import "base/reset";
+@import "base/base";
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+//components
+@import "components/buttons";
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+//layout
+
+//pages
+
+//themes
 
 body {
   max-width: 1280px;

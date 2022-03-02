@@ -1,61 +1,59 @@
-@mixin font($font, $style: normal, $weight: normal) {
-  font-family: ($font, sans-serif);
-  font-weight: $weight;
-  font-style: $style;
+html {
+  box-sizing: border-box;
+  font-family: "Georgia", sans-serif;
+  letter-spacing: $spacing;
+  font-weight: normal;
+  font-style: normal;
 }
 
-$spacing: 0.06em;
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 h2 {
-  @include font(Georgia);
   font-size: 44px;
   line-height: 130%;
   color: #C4C4C4;
 }
 
 h3 {
-  @include font(Georgia);
   font-size: 35px;
   line-height: 130%;
-  letter-spacing: $spacing;
   color: $color-dark-l;
 }
 
 
 .h3-mobile {
   @media screen and (max-width: 500px) {
-    @include font(Georgia);
     font-size: 25px;
     line-height: 130%;
-    letter-spacing: $spacing;
     text-align: center;
   }
 }
 
 h4 {
-  @include font(Georgia);
   font-size: 20px;
   line-height: 115%;
-  letter-spacing: $spacing;
 }
 
 h5 {
-  @include font(Georgia);
   font-size: 15px;
   line-height: 110%;
-  letter-spacing: $spacing;
-
 }
 
 .h5-modal-window {
-  @include font(Georgia);
   font-size: 15px;
   line-height: 110%;
-  letter-spacing: $spacing;
 }
 
 .paragraph-l {
-  font-family: (Arial, sans-serif);
+  font-family: Arial, sans-serif;
   font-size: 15px;
   line-height: 160%;
   color: $color-dark-s;
@@ -66,28 +64,28 @@ h5 {
 }
 
 .paragraph-s {
-  @include font(Arial, italic);
+  font-family: Arial, sans-serif;
+  font-style: italic;
   font-size: 12px;
   line-height: 150%;
 }
 
 .paragraph-mobile-menu {
-  @media screen and (max-width: 760px) {
-    @include font(Arial);
+  @media screen and (max-width: $tablet-width) {
+    font-family: Arial, sans-serif;
     font-size: 32px;
     line-height: 160%;
   }
 }
 
 .logo__title {
-  @include font(Georgia);
   font-size: 32px;
   line-height: 110%;
-  letter-spacing: $spacing;
+
 }
 
 .logo__subtitle {
-  font-family: (Arial, sans-serif);
+  font-family: Arial, sans-serif;
   font-size: 13px;
   line-height: 15px;
   letter-spacing: 0.1em;
