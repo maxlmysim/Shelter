@@ -4,6 +4,7 @@ html {
   letter-spacing: $spacing;
   font-weight: normal;
   font-style: normal;
+  font-size: 10px;
 }
 
 *, *:before, *:after {
@@ -15,15 +16,34 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media screen and (max-width: 500px) {
+    padding: 0 10px;
+  }
+}
 
 h2 {
-  font-size: 44px;
+  font-size: 4.4rem;
   line-height: 130%;
   color: #C4C4C4;
 }
 
 h3 {
-  font-size: 35px;
+  font-size: 3.5rem;
   line-height: 130%;
   color: $color-dark-l;
 }
@@ -31,30 +51,30 @@ h3 {
 
 .h3-mobile {
   @media screen and (max-width: 500px) {
-    font-size: 25px;
+    font-size: 2.5rem;
     line-height: 130%;
     text-align: center;
   }
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 115%;
 }
 
 h5 {
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 110%;
 }
 
 .h5-modal-window {
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 110%;
 }
 
 .paragraph-l {
   font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 160%;
   color: $color-dark-s;
 
@@ -66,27 +86,27 @@ h5 {
 .paragraph-s {
   font-family: Arial, sans-serif;
   font-style: italic;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 150%;
 }
 
 .paragraph-mobile-menu {
   @media screen and (max-width: $tablet-width) {
     font-family: Arial, sans-serif;
-    font-size: 32px;
+    font-size: 3.2rem;
     line-height: 160%;
   }
 }
 
 .logo__title {
-  font-size: 32px;
+  font-size: 3.2rem;
   line-height: 110%;
 
 }
 
 .logo__subtitle {
   font-family: Arial, sans-serif;
-  font-size: 13px;
+  font-size: 1.3rem;
   line-height: 15px;
   letter-spacing: 0.1em;
 }
