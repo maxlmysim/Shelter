@@ -1,0 +1,108 @@
+.donation {
+  background: $color-light-l;
+  padding-top: 78px;
+  padding-bottom: 100px;
+
+  @media screen and (max-width: 500px) {
+    padding-top: 43px;
+    padding-bottom: 43px;
+  }
+}
+
+.donation {
+  .container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 980px) {
+      flex-direction: column-reverse;
+    }
+
+    @media screen and (max-width: 850px) {
+      gap: 60px;
+    }
+
+    @media screen and (max-width: 500px) {
+      gap: 41px;
+    }
+  }
+
+  &__puppy {
+    max-width: 505px;
+    max-height: 261px;
+
+    @media screen and (max-width: 760px) {
+      max-width: 81.25vw;
+    }
+  }
+
+  .content {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (max-width: 500px) {
+      align-items: center;
+      gap: 24px;
+    }
+  }
+
+  .heading {
+    color: $color-dark-l;
+    max-width: 300px;
+
+    @media screen and (max-width: 500px) {
+      max-width: 225px;
+    }
+  }
+
+  .subheading {
+    color: $color-dark-l;
+
+    @media screen and (max-width: 500px) {
+      letter-spacing: 0;
+    }
+  }
+
+  .credit-card {
+    max-width: 350px;
+    display: flex;
+    gap: 15px;
+    background: $color-primary;
+    padding: 10px 15px;
+    border-radius: 9px;
+
+    @media screen and (max-width: 500px) {
+      width: 281px;
+    }
+  }
+
+  .description {
+    color: $color-dark-m;
+
+    @media screen and (max-width: 500px) {
+      text-align: justify;
+      padding: 0 9px;
+      margin-top: -5px;
+    }
+  }
+}
+
+.credit-card {
+  &__svg {
+    width: 30px;
+    height: 23px;
+  }
+
+  &__number {
+    color: $color-dark-l;
+
+    @media screen and (max-width: 500px) {
+      font-size: 15px;
+      line-height: 110%;
+    }
+  }
+}
