@@ -1,0 +1,167 @@
+.footer {
+  background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  padding-top: 40px;
+
+  @media screen and (max-width: 850px) {
+    padding-top: 30px;
+  }
+
+  .container {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 300px 320px 300px;
+    grid-template-areas: "contacts location puppy";
+
+    @media screen and (max-width: 1270px) {
+      padding-left: 15px;
+    }
+
+    @media screen and (max-width: 980px) {
+      grid-template-rows: 234px 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "contacts location"
+                             "puppy    puppy";
+      justify-items: center;
+      column-gap: 60px;
+      row-gap: 65px;
+    }
+
+    @media screen and (max-width: 850px) {
+      padding: 0;
+      margin: 0 64px;
+      column-gap: 37px;
+    }
+
+    @media screen and (max-width: 760px) {
+      grid-template-rows: 208px 222px 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "contacts "
+        "location"
+        "puppy ";
+      row-gap: 40px;
+      column-gap: 0;
+      margin: 0 10px;
+    }
+
+    @media screen and (max-width: 500px) {
+      margin: 0;
+    }
+  }
+
+  .contacts,
+  .locations {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 15px;
+    max-height: 234px;
+    max-width: 93.75vw;
+
+    @media screen and (max-width: 850px) {
+      margin: 0;
+      gap: 42px;
+    }
+
+    @media screen and (max-width: 500px) {
+      align-items: center;
+    }
+  }
+
+  .contacts {
+    grid-area: contacts;
+  }
+
+  .locations {
+    grid-area: location;
+    gap: 35px;
+    max-width: 305px;
+
+    @media screen and (max-width: 850px) {
+      gap: 30px;
+    }
+
+    @media screen and (max-width: 500px) {
+      gap: 40px;
+    }
+  }
+
+  &__puppy {
+    max-width: 300px;
+    grid-area: puppy;
+
+    @media screen and (max-width: 980px) {
+      grid-column-start: span 2;
+    }
+
+    @media screen and (max-width: 500px) {
+      max-width: 260px;
+    }
+  }
+
+  .title {
+    color: $color-light-xl;
+  }
+
+  .mail,
+  .phone,
+  .boston,
+  .london {
+    display: flex;
+    gap: 20px;
+  }
+
+  .boston {
+    @media screen and (max-width: 850px) {
+      & .locations__icon {
+        margin-top: 7px;
+      }
+
+      & .locations__address {
+        margin-bottom: 8px;
+
+        @media screen and (max-width: 500px) {
+          margin-bottom: 3px;
+        }
+      }
+    }
+  }
+
+  .title {
+    @media screen and (max-width: 500px) {
+      width: 90vw;
+    }
+  }
+
+  .address {
+    @media screen and (max-width: 500px) {
+      width: 265px;
+    }
+  }
+
+  .mail__icon,
+  .phone__icon {
+    width: 40px;
+    height: 32px;
+  }
+
+  .phone__icon {
+    @media screen and (max-width: 850px) {
+      margin-top: -6px;
+    }
+  }
+
+  .mail__address-text,
+  .phone__number-text,
+  .address {
+    color: $color-primary;
+  }
+
+  .locations__icon {
+    width: 22px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
