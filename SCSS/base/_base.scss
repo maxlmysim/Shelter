@@ -1,14 +1,14 @@
 html {
   box-sizing: border-box;
-  font-family: "Georgia", sans-serif;
-  letter-spacing: $spacing;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 10px;
+    font-size: 10px;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
+  font-family: "Georgia", sans-serif;
+  letter-spacing: $spacing;
+  font-weight: normal;
+  font-style: normal;
 }
 
 img {
@@ -24,15 +24,13 @@ a {
 body {
   max-width: 1280px;
   margin: 0 auto;
+
 }
 
 .wrapper {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+  margin: 0 40px;
+  @media screen and (max-width: $tablet-width) {
 
-  @media screen and (max-width: 500px) {
-    padding: 0 10px;
   }
 }
 

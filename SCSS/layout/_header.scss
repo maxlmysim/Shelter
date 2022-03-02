@@ -3,25 +3,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
   max-width: 1200px;
-  width: 100%;
-  margin-top: 60px;
-  margin-left: 41px;
+  width: calc(100% - 60px);
+  margin: 60px 0 0 41px;
 
-
-  @media screen and (max-width: 1270px) {
-    max-width: 95vw;
-    margin-left: 15px;
-  }
 
   @media screen and (max-width: 850px) {
     margin: 30px 0 30px 30px;
-    width: auto;
   }
 
-  &__nav-menu {
-    @media screen and (max-width: 760px) {
+  .nav-menu {
+    @media screen and (max-width: $tablet-width) {
       display: none;
     }
   }
@@ -32,13 +24,11 @@
 }
 
 .nav-menu {
+  margin-top: -2px;
   &__list {
     display: flex;
     gap: 35px;
     margin-right: 3px;
-    @media screen and (max-width: 850px) {
-      margin-left: 80px;
-    }
   }
 
   &__item_active, &__item:hover {

@@ -38,6 +38,7 @@ h5 {
   font-size: 1.5rem;
   line-height: 160%;
   color: $color-dark-s;
+  letter-spacing: 0;
 
   @media screen and (max-width: 500px) {
     text-align: justify;
@@ -62,7 +63,6 @@ h5 {
 .logo__title {
   font-size: 3.2rem;
   line-height: 110%;
-
 }
 
 .logo__subtitle {
