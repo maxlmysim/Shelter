@@ -6,7 +6,7 @@
   max-width: 1200px;
   width: calc(100% - 60px);
   margin: 60px 0 0 41px;
-
+  color: $color-dark-s;
 
   @media screen and (max-width: 850px) {
     margin: 30px 0 30px 30px;
@@ -16,27 +16,20 @@
     @media screen and (max-width: $tablet-width) {
       display: none;
     }
-  }
 
-  @media screen and (max-width: 500px) {
-    margin-left: 10px;
-  }
-}
+    &__list {
+      display: flex;
+      gap: 35px;
+      margin: -2px 3px 0 0;
+    }
 
-.nav-menu {
-  margin-top: -2px;
-  &__list {
-    display: flex;
-    gap: 35px;
-    margin-right: 3px;
-  }
+    &__item_active, &__item:hover {
+      color: $color-light-s;
+      @extend %transition;
+    }
 
-  &__item_active, &__item:hover {
-    color: $color-light-s;
-    @extend %transition;
-  }
-
-  &__item_active {
-    border-bottom: 3px solid $color-primary;
+    &__item_active {
+      border-bottom: 3px solid $color-primary;
+    }
   }
 }
