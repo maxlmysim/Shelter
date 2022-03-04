@@ -312,6 +312,10 @@ h2 {
   font-size: 4.4rem;
   line-height: 130%;
   color: #C4C4C4;
+  font-size: 4.4rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 10px;
 }
 
 h3 {
@@ -449,67 +453,24 @@ h5 {
 .start-screen {
   background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
   margin-bottom: 80px;
-}
-@media screen and (max-width: 850px) {
-  .start-screen {
-    padding-top: 150px;
-  }
+  padding-top: 180px;
 }
 @media screen and (max-width: 500px) {
   .start-screen {
     margin-bottom: 40px;
   }
 }
-
 .start-screen__container {
   display: grid;
   grid-gap: 42px;
   grid-template-columns: minmax(330px, 1fr) minmax(auto, 698px);
 }
-@media screen and (max-width: 1270px) {
-  .start-screen__container {
-    grid-gap: 0;
-  }
-}
-@media screen and (max-width: 850px) {
-  .start-screen__container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 322px 1fr;
-    justify-items: center;
-    gap: 100px;
-  }
-}
-@media screen and (max-width: 760px) {
-  .start-screen__container {
-    gap: 105px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .start-screen__container {
-    gap: 80px;
-  }
-}
 .start-screen .content {
-  margin-top: 343px;
+  margin-top: 163px;
 }
 @media screen and (max-width: 1270px) {
   .start-screen .content {
-    padding-left: 15px;
-    margin-top: 28vw;
-  }
-}
-@media screen and (max-width: 850px) {
-  .start-screen .content {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media screen and (max-width: 500px) {
-  .start-screen .content {
-    max-width: 93.75vw;
+    margin-top: 15vw;
   }
 }
 @media screen and (max-width: 500px) {
@@ -541,7 +502,6 @@ h5 {
   margin-bottom: 42px;
 }
 .start-screen__puppy {
-  margin-top: 180px;
   max-width: 698px;
 }
 @media screen and (max-width: 1270px) {
