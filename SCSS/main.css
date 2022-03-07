@@ -309,24 +309,26 @@ body {
 }
 
 h2 {
-  font-size: 4.4rem;
-  line-height: 130%;
   color: #C4C4C4;
   font-size: 4.4rem;
-  font-style: italic;
-  font-weight: 500;
-  line-height: 10px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 130%;
 }
 
 h3 {
-  font-size: 3.5rem;
-  line-height: 130%;
   color: #545454;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 130%;
 }
 
 @media screen and (max-width: 500px) {
   .h3-mobile {
     font-size: 2.5rem;
+    font-style: normal;
+    font-weight: normal;
     line-height: 130%;
     text-align: center;
   }
@@ -334,24 +336,32 @@ h3 {
 
 h4 {
   font-size: 2rem;
+  font-style: normal;
+  font-weight: normal;
   line-height: 115%;
 }
 
 h5 {
   font-size: 1.5rem;
+  font-style: normal;
+  font-weight: normal;
   line-height: 110%;
 }
 
 .h5-modal-window {
   font-size: 1.5rem;
+  font-style: normal;
+  font-weight: normal;
   line-height: 110%;
 }
 
 .paragraph-l {
   font-family: Arial, sans-serif;
-  font-size: 1.5rem;
-  line-height: 160%;
   letter-spacing: 0;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 160%;
 }
 @media screen and (max-width: 500px) {
   .paragraph-l {
@@ -363,27 +373,37 @@ h5 {
   font-family: Arial, sans-serif;
   font-style: italic;
   font-size: 1.2rem;
+  font-style: italic;
+  font-weight: normal;
   line-height: 150%;
 }
 
+.paragraph-mobile-menu {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 160%;
+}
 @media screen and (max-width: 768px) {
   .paragraph-mobile-menu {
     font-family: Arial, sans-serif;
-    font-size: 3.2rem;
-    line-height: 160%;
   }
 }
 
 .logo__title {
   font-size: 3.2rem;
+  font-style: normal;
+  font-weight: normal;
   line-height: 110%;
 }
 
 .logo__subtitle {
   font-family: Arial, sans-serif;
-  font-size: 1.3rem;
-  line-height: 15px;
   letter-spacing: 0.1em;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 15px;
 }
 
 .button {

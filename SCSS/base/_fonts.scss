@@ -1,45 +1,36 @@
 h2 {
-  font-size: 4.4rem;
-  line-height: 130%;
   color: #C4C4C4;
-  @include font(4.4rem, 10px, 500, italic);
+  @include font(4.4rem, 130%);
 }
 
 h3 {
-  font-size: 3.5rem;
-  line-height: 130%;
   color: $color-dark-l;
+  @include font(3.5rem, 130%);
 }
 
 .h3-mobile {
   @media screen and (max-width: 500px) {
-    font-size: 2.5rem;
-    line-height: 130%;
+    @include font(2.5rem, 130%);
     text-align: center;
   }
 }
 
 h4 {
-  font-size: 2rem;
-  line-height: 115%;
-
+  @include font(2rem, 115%);
 }
 
 h5 {
-  font-size: 1.5rem;
-  line-height: 110%;
+  @include font(1.5rem, 110%);
 }
 
 .h5-modal-window {
-  font-size: 1.5rem;
-  line-height: 110%;
+  @include font(1.5rem, 110%);
 }
 
 .paragraph-l {
   font-family: Arial, sans-serif;
-  font-size: 1.5rem;
-  line-height: 160%;
   letter-spacing: 0;
+  @include font(1.5rem, 160%);
 
   @media screen and (max-width: 500px) {
     text-align: justify;
@@ -49,26 +40,22 @@ h5 {
 .paragraph-s {
   font-family: Arial, sans-serif;
   font-style: italic;
-  font-size: 1.2rem;
-  line-height: 150%;
+  @include font(1.2rem, 150%, normal, italic);
 }
 
 .paragraph-mobile-menu {
   @media screen and (max-width: $tablet-width) {
     font-family: Arial, sans-serif;
-    font-size: 3.2rem;
-    line-height: 160%;
   }
+  @include font(3.2rem, 160%);
 }
 
 .logo__title {
-  font-size: 3.2rem;
-  line-height: 110%;
+  @include font(3.2rem, 110%);
 }
 
 .logo__subtitle {
   font-family: Arial, sans-serif;
-  font-size: 1.3rem;
-  line-height: 15px;
   letter-spacing: 0.1em;
+  @include font(1.3rem, 15px);
 }
