@@ -117,6 +117,11 @@
   }
 }
 
+.pets-card:hover {
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+  @extend %transition;
+}
+
 .arrow-left {
   @media screen and (max-width: 500px) {
     grid-area: arrow-left;
