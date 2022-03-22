@@ -1,4 +1,4 @@
-.header .nav-menu__item_active, .header .nav-menu__item:hover, .switch:hover, .button:hover {
+.pets-card:hover, .header .nav-menu__item_active, .header .nav-menu__item:hover, .switch:hover, .button:hover {
   transition: all 0.3s ease-in-out;
 }
 
@@ -269,6 +269,7 @@ textarea {
 html {
   box-sizing: border-box;
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -741,6 +742,10 @@ h5 {
   .pets-card:nth-child(2) {
     display: none;
   }
+}
+
+.pets-card:hover {
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 @media screen and (max-width: 500px) {
