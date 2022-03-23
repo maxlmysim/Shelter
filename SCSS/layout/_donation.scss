@@ -1,7 +1,7 @@
 .donation {
   background: $color-light-l;
-  padding-top: 78px;
-  padding-bottom: 100px;
+  padding-top: 80px;
+  padding-bottom: 101px;
 
   @media screen and (max-width: 500px) {
     padding-top: 43px;
@@ -32,6 +32,7 @@
   &__puppy {
     max-width: 505px;
     max-height: 261px;
+    margin-top: -17px;
 
     @media screen and (max-width: 760px) {
       max-width: 81.25vw;
@@ -87,7 +88,7 @@
 
   .description {
     color: $color-dark-m;
-
+letter-spacing: normal;
     @media screen and (max-width: 500px) {
       text-align: justify;
       padding: 0 9px;
