@@ -1,6 +1,6 @@
 .footer {
   background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
-  padding-top: 40px;
+  padding-top: 42px;
 
   @media screen and (max-width: 850px) {
     padding-top: 30px;
@@ -53,7 +53,7 @@
   .locations {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 42px;
     margin-top: 15px;
     max-height: 234px;
     max-width: 93.75vw;
@@ -74,7 +74,7 @@
 
   .locations {
     grid-area: location;
-    gap: 35px;
+    gap: 32px;
     max-width: 305px;
 
     @media screen and (max-width: 850px) {
@@ -139,29 +139,68 @@
     }
   }
 
-  .mail__icon,
-  .phone__icon {
-    width: 40px;
-    height: 32px;
-  }
-
-  .phone__icon {
-    @media screen and (max-width: 850px) {
-      margin-top: -6px;
-    }
-  }
-
   .mail__address-text,
   .phone__number-text,
   .address {
     color: $color-primary;
+    position: relative;
   }
 
   .locations__icon {
     width: 22px;
     height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  }
+}
+
+.mail__address-text,
+.phone__number-text {
+  padding-left: 60px;
+
+  &:before {
+    content: '';
+    width: 40px;
+    height: 32px;
+    display: inline-block;
+    position: absolute;
+  }
+}
+
+.mail__address-text {
+  &:before {
+    background: url('../../assets/icons/icon-email.svg') no-repeat;
+    left: -1px;
+    top: -2px;
+  }
+}
+
+.phone__number-text {
+  padding-top: 8px;
+
+  &:before {
+    background: url('../../assets/icons/icon-phone.svg') no-repeat;
+    left: 0;
+    top: 4px;
+  }
+}
+
+.address {
+  padding-left: 40px;
+
+  &:before {
+    content: '';
+    background: url('../../assets/icons/icon-marker.svg') no-repeat;
+    width: 40px;
+    height: 32px;
+    display: inline-block;
+    position: absolute;
+    left: -2px;
+    top: 7px;
+  }
+}
+
+.london .address {
+  margin-top: 5px;
+  &:before {
+    top: -3px;
   }
 }
