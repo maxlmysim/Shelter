@@ -75,6 +75,11 @@
     padding: 10px 15px;
     border-radius: 9px;
 
+    &:hover {
+      background: $color-primary-light;
+      @extend %transition;
+    }
+
     @media screen and (max-width: 500px) {
       width: 281px;
     }

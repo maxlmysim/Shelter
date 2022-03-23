@@ -1,4 +1,4 @@
-.pets-card:hover, .header .nav-menu__item_active, .header .nav-menu__item:hover, .switch:hover, .button:hover {
+.donation .credit-card:hover, .pets-card:hover, .header .nav-menu__item_active, .header .nav-menu__item:hover, .switch:hover, .button:hover {
   transition: all 0.3s ease-in-out;
 }
 
@@ -933,6 +933,9 @@ h5 {
   background: #F1CDB3;
   padding: 10px 15px;
   border-radius: 9px;
+}
+.donation .credit-card:hover {
+  background: #FDDCC4;
 }
 @media screen and (max-width: 500px) {
   .donation .credit-card {
