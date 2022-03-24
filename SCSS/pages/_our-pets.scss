@@ -2,6 +2,7 @@
   position: static;
   color: $color-dark-l;
   margin: 30px 0 30px 40px;
+  max-width: 1201px;
 
   .logo__title {
     color: $color-dark-l;
@@ -16,7 +17,6 @@
     color: $color-dark-3xl;
   }
 }
-
 
 .main.our-pets {
   background: $color-light-l;
