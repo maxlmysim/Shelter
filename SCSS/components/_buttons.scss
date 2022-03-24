@@ -8,6 +8,7 @@
   line-height: 130%;
   letter-spacing: $spacing;
   color: $color-dark-3xl;
+
   &:hover {
     background: $color-primary-light;
     @extend %transition;
@@ -21,14 +22,26 @@
 
 .switch {
   padding: 0;
-  width: 53px;
-  height: 53px;
+  width: 52px;
+  height: 52px;
   border: 2px solid $color-primary;
   border-radius: 100px;
   background: rgba(255, 255, 255, 0);
-  &:hover {
+  font-size: 1.4rem;
+
+  &:hover,
+  &_active {
     background: $color-primary-light;
     @extend %transition;
+  }
+
+  &_inactive {
+    color: $color-dark-s;
+    border-color: $color-dark-s;
+
+    &:hover {
+      background: none;
+    }
   }
 }
 
