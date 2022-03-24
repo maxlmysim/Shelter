@@ -2,9 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Pets</title>
+    <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../SCSS/main.css">
 </head>
 <body>
-
+<header class="header our-pets">
+    <div class="logo">
+        <h1 class="logo__title">Cozy House</h1>
+        <p class="logo__subtitle">Shelter for pets in Boston</p>
+    </div>
+    <nav class="nav-menu">
+        <ul class="nav-menu__list">
+            <li class="nav-menu__item paragraph-l">
+                <a href="../main/index.html#about"><p class="paragraph-l">About the shelter</p></a>
+            </li>
+            <li class="nav-menu__item paragraph-l nav-menu__item_active">
+                <a href="../pets/index.html"><p class="paragraph-l">Our pets</p></a>
+            </li>
+            <li class="nav-menu__item paragraph-l">
+                <a href="../main/index.html#help-shelter"><p class="paragraph-l">Help the shelter</p></a>
+            </li>
+            <li class="nav-menu__item paragraph-l">
+                <a href="#contacts"><p class="paragraph-l">Contacts</p></a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main our-pets">
+    <div class="wrapper content">
+        <h3 class="heading h3-mobile">Our friends who are looking for a house</h3>
+        <div class="slider">
+            <div class="pets-cards"></div>
+            <div class="slider-navigation">
+                <button class="switch"><<</button>
+                <button class="switch"><</button>
+                <button class="switch">1</button>
+                <button class="switch">></button>
+                <button class="switch">>></button>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="wrapper container">
+        <div class="contacts" id="contacts">
+            <h3 class="title h3-mobile">For questions and suggestions</h3>
+            <a href="mailto:email@shelter.com" class="mail__address">
+                <div class="mail">
+                    <h4 class="mail__address-text">email@shelter.com</h4>
+                </div>
+            </a>
+            <a href="tel:+136745677554" class="phone__number">
+                <div class="phone">
+                    <h4 class="phone__number-text">+13 674 567 75 54</h4>
+                </div>
+            </a>
+        </div>
+        <div class="locations">
+            <h3 class="title h3-mobile">We are waiting for your visit</h3>
+            <a href="https://www.google.by/maps/place/1+Central+St,+Boston,+MA+02109,+USA/@42.3585519,-71.056915,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.3585519!4d-71.0547263"
+               target="_blank">
+                <div class="boston">
+                    <h4 class="address">1 Central Street, Boston (entrance from the store)</h4>
+                </div>
+            </a>
+            <a href="https://www.google.by/maps/place/South+Park+Court,+18+S+Park+Rd,+London+SW19+8TD,+UK/@51.4202192,-0.2023407,17z/data=!3m1!4b1!4m5!3m4!1s0x487608baa7401b31:0x873a95ca58e122b2!8m2!3d51.4202192!4d-0.200152"
+               target="_blank">
+                <div class="london">
+                    <h4 class="address">18 South Park, London</h4>
+                </div>
+            </a>
+        </div>
+        <img class="footer__puppy" src="../../assets/images/footer-puppy.png" alt="puppy">
+    </div>
+</footer>
 </body>
 </html>

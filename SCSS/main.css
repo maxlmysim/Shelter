@@ -102,6 +102,7 @@ a {
 body {
   max-width: 1280px;
   margin: 0 auto;
+  background: #FFFFFF;
 }
 
 .wrapper {
@@ -537,6 +538,7 @@ h5 {
   align-items: center;
   background: #FAFAFA;
   grid-area: card;
+  border-radius: 9px;
 }
 .pets-card .button {
   margin-bottom: 30px;
@@ -975,6 +977,41 @@ h5 {
 }
 .london .address:before {
   top: -3px;
+}
+
+.header.our-pets {
+  position: static;
+  color: #545454;
+  margin: 30px 0 30px 40px;
+}
+.header.our-pets .logo__title {
+  color: #545454;
+}
+.header.our-pets .logo__subtitle,
+.header.our-pets .nav-menu__item_active {
+  color: #292929;
+}
+.header.our-pets .nav-menu__item:hover {
+  color: #292929;
+}
+
+.main.our-pets {
+  background: #F6F6F6;
+}
+.main.our-pets .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main.our-pets .heading {
+  text-align: center;
+  padding-top: 80px;
+  width: 400px;
+  margin-bottom: 45px;
+}
+.main.our-pets .content {
+  padding-bottom: 100px;
 }
 
 /*# sourceMappingURL=main.css.map */

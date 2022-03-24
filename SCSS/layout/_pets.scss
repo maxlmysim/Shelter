@@ -40,7 +40,6 @@
   }
 
   .slider {
-    //margin-top: -3px;
     display: grid;
     grid-template-columns: 1fr minmax(280px, 990px) 1fr;
     width: 100%;
@@ -98,6 +97,7 @@
   align-items: center;
   background: $color-light-s;
   grid-area: card;
+  border-radius: 9px;
 
   .button {
     margin-bottom: 30px;

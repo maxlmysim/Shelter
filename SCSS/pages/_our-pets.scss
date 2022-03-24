@@ -1,0 +1,41 @@
+.header.our-pets {
+  position: static;
+  color: $color-dark-l;
+  margin: 30px 0 30px 40px;
+
+  .logo__title {
+    color: $color-dark-l;
+  }
+
+  .logo__subtitle,
+  .nav-menu__item_active {
+    color: $color-dark-3xl;
+  }
+
+  .nav-menu__item:hover {
+    color: $color-dark-3xl;
+  }
+}
+
+
+.main.our-pets {
+  background: $color-light-l;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .heading {
+    text-align: center;
+    padding-top: 80px;
+    width: 400px;
+    margin-bottom: 45px;
+  }
+
+  .content {
+    padding-bottom: 100px;
+  }
+}
