@@ -218,7 +218,7 @@ h5 {
 }
 
 .button {
-  padding: 15px 45px;
+  padding: 16px 45px;
   height: 52px;
   border-radius: 100px;
   border: 0;
@@ -294,6 +294,11 @@ h5 {
   margin-bottom: 80px;
   padding-top: 180px;
 }
+@media screen and (max-width: 900px) {
+  .start-screen {
+    padding-top: 150px;
+  }
+}
 @media screen and (max-width: 500px) {
   .start-screen {
     margin-bottom: 40px;
@@ -301,8 +306,25 @@ h5 {
 }
 .start-screen__container {
   display: grid;
-  grid-gap: 42px;
   grid-template-columns: minmax(330px, 1fr) minmax(auto, 698px);
+}
+@media screen and (max-width: 850px) {
+  .start-screen__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 322px 1fr;
+    justify-items: center;
+    gap: 100px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .start-screen__container {
+    gap: 105px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .start-screen__container {
+    gap: 80px;
+  }
 }
 .start-screen .content {
   margin-top: 163px;
@@ -310,6 +332,20 @@ h5 {
 @media screen and (max-width: 1270px) {
   .start-screen .content {
     margin-top: 15vw;
+  }
+}
+@media screen and (max-width: 850px) {
+  .start-screen .content {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .start-screen .content {
+    max-width: 93.75vw;
   }
 }
 @media screen and (max-width: 500px) {
@@ -343,6 +379,7 @@ h5 {
 }
 .start-screen__puppy {
   max-width: 698px;
+  margin: auto;
 }
 @media screen and (max-width: 1270px) {
   .start-screen__puppy {
@@ -353,8 +390,6 @@ h5 {
 }
 @media screen and (max-width: 850px) {
   .start-screen__puppy {
-    margin-top: 0;
-    margin-left: 140px;
     width: 74%;
   }
 }
@@ -473,6 +508,8 @@ h5 {
 .pets .heading {
   width: 480px;
   color: #545454;
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 @media screen and (max-width: 850px) {
@@ -590,7 +627,7 @@ h5 {
 
 .help .content {
   margin-top: 80px;
-  margin-bottom: 102px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -789,7 +826,7 @@ h5 {
 
 .footer {
   background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
-  padding-top: 42px;
+  padding-top: 41px;
 }
 @media screen and (max-width: 850px) {
   .footer {
@@ -866,7 +903,7 @@ h5 {
 }
 .footer .locations {
   grid-area: location;
-  gap: 32px;
+  gap: 33px;
   max-width: 305px;
 }
 @media screen and (max-width: 850px) {
