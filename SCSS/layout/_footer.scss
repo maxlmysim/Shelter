@@ -1,6 +1,6 @@
 .footer {
   background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
-  padding-top: 42px;
+  padding-top: 41px;
 
   @media screen and (max-width: 850px) {
     padding-top: 30px;
@@ -74,7 +74,7 @@
 
   .locations {
     grid-area: location;
-    gap: 32px;
+    gap: 33px;
     max-width: 305px;
 
     @media screen and (max-width: 850px) {
