@@ -74,52 +74,27 @@ h1, h2, h3, h4, .switch.switch-slider, h5, h6 {
   font-weight: inherit;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-*, *:before, *:after {
-  font-family: "Georgia", sans-serif;
-  letter-spacing: 0.06em;
+@font-face {
+  font-family: "Georgia Regular";
+  src: url("../../assets/fonts/Georgia.eot");
+  src: url("../../assets/fonts/Georgia.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Georgia.woff") format("woff"), url("../../assets/fonts/Georgia.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
-img {
-  max-width: 100%;
-  height: auto;
+@font-face {
+  font-family: "Arial";
+  src: url("../../assets/fonts/Arial-ItalicMT.eot");
+  src: local("Arial Italic"), local("Arial-ItalicMT"), url("../../assets/fonts/Arial-ItalicMT.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Arial-ItalicMT.woff") format("woff"), url("../../assets/fonts/Arial-ItalicMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
 }
-
-a {
-  color: inherit;
+@font-face {
+  font-family: "Arial";
+  src: url("../../assets/fonts/ArialMT.eot");
+  src: local("Arial"), local("ArialMT"), url("../../assets/fonts/ArialMT.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/ArialMT.woff") format("woff"), url("../../assets/fonts/ArialMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
-
-body {
-  max-width: 1280px;
-  margin: 0 auto;
-  background: #FFFFFF;
-}
-
-.wrapper {
-  margin: 0 40px;
-}
-@media screen and (max-width: 320px) {
-  .wrapper {
-    margin: 0;
-  }
-}
-
-.logo__title {
-  color: #F1CDB3;
-  margin-bottom: 10px;
-}
-.logo__subtitle {
-  display: flex;
-  align-items: center;
-  color: #FFFFFF;
-  padding-left: 3px;
-}
-
 h2 {
   color: #C4C4C4;
   font-size: 4.4rem;
@@ -182,7 +157,7 @@ h5 {
 }
 
 .paragraph-s {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-style: italic;
   font-size: 1.2rem;
   font-style: italic;
@@ -198,7 +173,7 @@ h5 {
 }
 @media screen and (max-width: 768px) {
   .paragraph-mobile-menu {
-    font-family: Arial, sans-serif;
+    font-family: "Arial", sans-serif;
   }
 }
 
@@ -210,12 +185,58 @@ h5 {
 }
 
 .logo__subtitle {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   letter-spacing: 0.1em;
   font-size: 1.3rem;
   font-style: normal;
   font-weight: normal;
   line-height: 15px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  font-family: "Georgia Regular", sans-serif;
+  letter-spacing: 0.06em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+
+.wrapper {
+  margin: 0 40px;
+}
+@media screen and (max-width: 320px) {
+  .wrapper {
+    margin: 0;
+  }
+}
+
+.logo__title {
+  color: #F1CDB3;
+  margin-bottom: 10px;
+}
+.logo__subtitle {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  padding-left: 3px;
 }
 
 .button {
