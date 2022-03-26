@@ -390,7 +390,10 @@ h5 {
 }
 @media screen and (max-width: 850px) {
   .start-screen__puppy {
-    width: 74%;
+    position: relative;
+    left: 70px;
+    max-width: 569px;
+    max-height: 593px;
   }
 }
 @media screen and (max-width: 760px) {
@@ -406,6 +409,11 @@ h5 {
 
 .about {
   margin-bottom: 90px;
+}
+@media screen and (max-width: 900px) {
+  .about {
+    margin-bottom: 100px;
+  }
 }
 @media screen and (max-width: 500px) {
   .about {
@@ -514,7 +522,7 @@ h5 {
 }
 @media screen and (max-width: 850px) {
   .pets .heading {
-    margin: 0;
+    margin: 0 0 0 2px;
   }
 }
 @media screen and (max-width: 500px) {

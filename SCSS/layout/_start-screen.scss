@@ -92,7 +92,10 @@
     }
 
     @media screen and (max-width: 850px) {
-      width: 74%;
+      position: relative;
+      left: 70px;
+      max-width: 569px ;
+      max-height: 593px;
     }
 
     @media screen and (max-width: 760px) {
