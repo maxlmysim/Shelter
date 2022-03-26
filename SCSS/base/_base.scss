@@ -38,7 +38,7 @@ body {
   &__subtitle {
     @include flex('', center);
     color: $color-light-xl;
-    padding-left: 3px;
+    padding-left: 4px;
   }
 }
 

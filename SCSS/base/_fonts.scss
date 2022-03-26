@@ -80,10 +80,10 @@ h5 {
 }
 
 .paragraph-mobile-menu {
+  @include font(3.2rem, 160%);
   @media screen and (max-width: $tablet-width) {
     font-family: 'Arial', sans-serif;
   }
-  @include font(3.2rem, 160%);
 }
 
 .logo__title {
