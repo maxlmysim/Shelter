@@ -50,6 +50,8 @@
     @media screen and (max-width: 500px) {
       max-width: 93.75vw;
     }
+
+
   }
 
   .heading,
@@ -74,12 +76,16 @@
       max-width: 250px;
       letter-spacing: 0.06em;
     }
+
+    @media screen and (max-width: 500px) {
+      margin-bottom: 41px;
+    }
   }
 
   .subheading {
     max-width: 460px;
     margin-bottom: 42px;
-    color: $color-dark-s
+    color: $color-dark-s;
   }
 
   &__puppy {

@@ -1,11 +1,8 @@
 html {
-  box-sizing: border-box;
-  font-size: 10px;
   scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
   font-family: "Georgia", sans-serif;
   letter-spacing: $spacing;
   font-weight: normal;
@@ -18,7 +15,6 @@ img {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
 }
 
@@ -30,8 +26,8 @@ body {
 
 .wrapper {
   margin: 0 40px;
-  @media screen and (max-width: $tablet-width) {
-
+  @media screen and (max-width: $mobile-width) {
+    margin: 0;
   }
 }
 
