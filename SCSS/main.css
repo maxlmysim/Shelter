@@ -614,8 +614,10 @@ body {
   margin-top: 80px;
   margin-bottom: 100px;
   display: flex;
-  flex-direction: column;
+  justify-content: "";
   align-items: center;
+  gap: 0px;
+  flex-direction: column;
 }
 @media screen and (max-width: 500px) {
   .help .content {
@@ -637,11 +639,13 @@ body {
 }
 .help__list {
   display: flex;
+  justify-content: center;
+  align-items: normal;
+  gap: 0px;
   column-gap: 120px;
   row-gap: 55px;
   flex-wrap: wrap;
   max-width: 1030px;
-  justify-content: center;
 }
 @media screen and (max-width: 1270px) {
   .help__list {
@@ -661,8 +665,10 @@ body {
 }
 .help__item {
   display: flex;
-  flex-direction: column;
+  justify-content: "";
   align-items: center;
+  gap: 0px;
+  flex-direction: column;
 }
 @media screen and (max-width: 1270px) {
   .help__item {

@@ -2,9 +2,8 @@
   .content {
     margin-top: 80px;
     margin-bottom: 100px;
-    display: flex;
+    @include flex('', center);
     flex-direction: column;
-    align-items: center;
 
     @media screen and (max-width: 500px) {
       margin-top: 41px;
@@ -25,12 +24,11 @@
   }
 
   &__list {
-    display: flex;
+    @include flex(center);
     column-gap: 120px;
     row-gap: 55px;
     flex-wrap: wrap;
     max-width: 1030px;
-    justify-content: center;
 
     @media screen and (max-width: 1270px) {
       margin: 0 15px;
@@ -47,9 +45,8 @@
   }
 
   &__item {
-    display: flex;
+    @include flex('',center);
     flex-direction: column;
-    align-items: center;
 
     @media screen and (max-width: 1270px) {
       width: 170px;
