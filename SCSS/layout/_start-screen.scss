@@ -36,7 +36,8 @@
 
       @media screen and (max-width: 1000px) {
         margin: 0;
-        @include flex('', center, '', '', column);
+        @include flex('', center);
+        flex-direction: column;
       }
     }
   }

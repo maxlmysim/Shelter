@@ -1,7 +1,7 @@
 .about {
   margin-bottom: 90px;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: $tablet-width) {
     margin-bottom: 100px;
   }
 
@@ -12,9 +12,7 @@
 
 .about {
   .container {
-    display: flex;
-    gap: 120px;
-    justify-content: center;
+    @include flex(center, '', 120px);
 
     @media screen and (max-width: 980px) {
       flex-direction: column-reverse;
@@ -36,7 +34,7 @@
   }
 
   .content {
-    display: flex;
+    @include flex();
     flex-direction: column;
     width: 430px;
     padding-top: 14px;
@@ -46,7 +44,6 @@
     }
 
     @media screen and (max-width: 500px) {
-      max-width: 100%;
       padding: 0 15px;
       margin: 0 auto;
     }
@@ -54,12 +51,7 @@
 
   .heading {
     color: $color-dark-l;
-    width: 370px;
     margin-bottom: 25px;
-
-    @media screen and (max-width: 500px) {
-      width: 100%;
-    }
   }
 
   .subheading {
