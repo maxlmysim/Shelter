@@ -20,7 +20,7 @@
     &__list {
       display: flex;
       gap: 35px;
-      margin: 0 3px 0 0;
+      margin: -3px 3px 0 0;
     }
 
     &__item_active, &__item:hover {

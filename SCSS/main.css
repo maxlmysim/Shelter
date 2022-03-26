@@ -280,7 +280,7 @@ h5 {
 .header .nav-menu__list {
   display: flex;
   gap: 35px;
-  margin: 0 3px 0 0;
+  margin: -3px 3px 0 0;
 }
 .header .nav-menu__item_active, .header .nav-menu__item:hover {
   color: #FAFAFA;
@@ -839,11 +839,6 @@ h5 {
   grid-template-columns: 300px 320px 300px;
   grid-template-areas: "contacts location puppy";
 }
-@media screen and (max-width: 1270px) {
-  .footer .container {
-    padding-left: 15px;
-  }
-}
 @media screen and (max-width: 980px) {
   .footer .container {
     grid-template-rows: 234px 1fr;
@@ -1051,7 +1046,7 @@ h5 {
 }
 .main.our-pets .heading {
   text-align: center;
-  padding-top: 81px;
+  padding-top: 80px;
   width: 400px;
   margin-bottom: 59px;
 }
