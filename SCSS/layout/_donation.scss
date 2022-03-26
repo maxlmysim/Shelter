@@ -11,10 +11,7 @@
 
 .donation {
   .container {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center, 30px);
 
     @media screen and (max-width: 980px) {
       flex-direction: column-reverse;
@@ -40,9 +37,8 @@
 
   .content {
     max-width: 380px;
-    display: flex;
+    @include flex('', '', 20px);
     flex-direction: column;
-    gap: 20px;
 
     @media screen and (max-width: 500px) {
       align-items: center;
@@ -69,8 +65,7 @@
 
   .credit-card {
     max-width: 350px;
-    display: flex;
-    gap: 15px;
+    @include flex('', '', 15px);
     background: $color-primary;
     padding: 10px 15px;
     border-radius: 9px;
@@ -87,7 +82,8 @@
 
   .description {
     color: $color-dark-m;
-letter-spacing: normal;
+    letter-spacing: normal;
+
     @media screen and (max-width: 500px) {
       text-align: justify;
       padding: 0 9px;

@@ -716,9 +716,9 @@ body {
 
 .donation .container {
   display: flex;
-  gap: 30px;
   justify-content: center;
   align-items: center;
+  gap: 30px;
 }
 @media screen and (max-width: 980px) {
   .donation .container {
@@ -747,8 +747,10 @@ body {
 .donation .content {
   max-width: 380px;
   display: flex;
-  flex-direction: column;
+  justify-content: "";
+  align-items: "";
   gap: 20px;
+  flex-direction: column;
 }
 @media screen and (max-width: 500px) {
   .donation .content {
@@ -776,6 +778,8 @@ body {
 .donation .credit-card {
   max-width: 350px;
   display: flex;
+  justify-content: "";
+  align-items: "";
   gap: 15px;
   background: #F1CDB3;
   padding: 10px 15px;
