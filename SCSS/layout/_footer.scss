@@ -39,10 +39,6 @@
       column-gap: 0;
       margin: 0 10px;
     }
-
-    //@media screen and (max-width: 500px) {
-    //  margin: 0;
-    //}
   }
 
   .contacts,
@@ -58,10 +54,6 @@
       margin: 0;
       gap: 42px;
     }
-
-    //@media screen and (max-width: 500px) {
-    //  align-items: center;
-    //}
   }
 
   .contacts {
@@ -72,17 +64,25 @@
     grid-area: location;
     gap: 33px;
     max-width: 305px;
+    max-height: 218px;
 
     @media screen and (max-width: 850px) {
       gap: 32px;
     }
 
-    //@media screen and (max-width: 500px) {
-    //  gap: 40px;
-    //}
+    @media screen and (max-width: 500px) {
+      @include flex(space-between, flex-start);
+      .address {
+        margin-left: 1px;
+      }
+    }
 
     .title {
       margin-left: -1px;
+      @media screen and (max-width: $mobile-width) {
+        max-width: 270px;
+        margin-left: 15px;
+      }
     }
   }
 
@@ -109,35 +109,17 @@
   .london {
     display: flex;
     gap: 20px;
-  }
 
-  .boston {
-    @media screen and (max-width: 850px) {
-      & .locations__icon {
-        margin-top: 7px;
-      }
-
-      & .locations__address {
-        margin-bottom: 8px;
-
-        //@media screen and (max-width: 500px) {
-        //  margin-bottom: 3px;
-        //}
-      }
+    @media screen and (max-width: $mobile-width) {
+      justify-content: center;
     }
   }
 
-  //.title {
-  //  @media screen and (max-width: 500px) {
-  //    width: 90vw;
-  //  }
-  //}
-
-  //.address {
-  //  @media screen and (max-width: 500px) {
-  //    width: 265px;
-  //  }
-  //}
+  .boston {
+    @media screen and (max-width: $mobile-width) {
+      margin: -2px -2px 0 0;
+    }
+  }
 
   .mail__address-text,
   .phone__number-text,
@@ -150,6 +132,7 @@
     width: 22px;
     height: 32px;
   }
+
 }
 
 .mail__address-text,
@@ -166,10 +149,19 @@
 }
 
 .mail__address-text {
+
+  @media screen and (max-width: $mobile-width) {
+    margin-top: 2px;
+  }
+
   &:before {
     background: url('../../assets/icons/icon-email.svg') no-repeat;
     left: -1px;
     top: -2px;
+
+    @media screen and (max-width: $mobile-width) {
+      top: -4px;
+    }
   }
 }
 
@@ -180,6 +172,10 @@
     background: url('../../assets/icons/icon-phone.svg') no-repeat;
     left: 0;
     top: 4px;
+
+    @media screen and (max-width: $mobile-width) {
+      top: 2px;
+    }
   }
 }
 
@@ -200,6 +196,7 @@
 
 .london .address {
   margin-top: 5px;
+
   &:before {
     top: -3px;
   }

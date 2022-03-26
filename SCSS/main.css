@@ -746,7 +746,8 @@ body {
 }
 @media screen and (max-width: 500px) {
   .donation {
-    padding-top: 41px;
+    padding-top: 40px;
+    padding-bottom: 42px;
   }
 }
 
@@ -764,6 +765,11 @@ body {
 @media screen and (max-width: 850px) {
   .donation .container {
     gap: 60px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .donation .container {
+    gap: 42px;
   }
 }
 .donation__puppy {
@@ -786,6 +792,7 @@ body {
 @media screen and (max-width: 320px) {
   .donation .content {
     align-items: center;
+    margin-left: -2px;
   }
 }
 .donation .heading {
@@ -795,6 +802,7 @@ body {
 @media screen and (max-width: 320px) {
   .donation .heading {
     max-width: 225px;
+    margin-left: 3px;
   }
 }
 .donation .subheading {
@@ -819,9 +827,24 @@ body {
 .donation .credit-card:hover {
   background: #FDDCC4;
 }
+@media screen and (max-width: 500px) {
+  .donation .credit-card a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+  }
+}
 .donation .description {
   color: #B2B2B2;
   letter-spacing: normal;
+}
+@media screen and (max-width: 500px) {
+  .donation .description {
+    text-align: justify;
+    padding: 0 9px;
+    width: 298px;
+  }
 }
 
 .credit-card__svg {
@@ -903,14 +926,32 @@ body {
   grid-area: location;
   gap: 33px;
   max-width: 305px;
+  max-height: 218px;
 }
 @media screen and (max-width: 850px) {
   .footer .locations {
     gap: 32px;
   }
 }
+@media screen and (max-width: 500px) {
+  .footer .locations {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0px;
+  }
+  .footer .locations .address {
+    margin-left: 1px;
+  }
+}
 .footer .locations .title {
   margin-left: -1px;
+}
+@media screen and (max-width: 320px) {
+  .footer .locations .title {
+    max-width: 270px;
+    margin-left: 15px;
+  }
 }
 .footer__puppy {
   max-width: 300px;
@@ -936,12 +977,17 @@ body {
   display: flex;
   gap: 20px;
 }
-@media screen and (max-width: 850px) {
-  .footer .boston .locations__icon {
-    margin-top: 7px;
+@media screen and (max-width: 320px) {
+  .footer .mail,
+.footer .phone,
+.footer .boston,
+.footer .london {
+    justify-content: center;
   }
-  .footer .boston .locations__address {
-    margin-bottom: 8px;
+}
+@media screen and (max-width: 320px) {
+  .footer .boston {
+    margin: -2px -2px 0 0;
   }
 }
 .footer .mail__address-text,
@@ -968,10 +1014,20 @@ body {
   position: absolute;
 }
 
+@media screen and (max-width: 320px) {
+  .mail__address-text {
+    margin-top: 2px;
+  }
+}
 .mail__address-text:before {
   background: url("../../assets/icons/icon-email.svg") no-repeat;
   left: -1px;
   top: -2px;
+}
+@media screen and (max-width: 320px) {
+  .mail__address-text:before {
+    top: -4px;
+  }
 }
 
 .phone__number-text {
@@ -981,6 +1037,11 @@ body {
   background: url("../../assets/icons/icon-phone.svg") no-repeat;
   left: 0;
   top: 4px;
+}
+@media screen and (max-width: 320px) {
+  .phone__number-text:before {
+    top: 2px;
+  }
 }
 
 .address {
