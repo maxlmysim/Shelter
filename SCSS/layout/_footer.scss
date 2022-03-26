@@ -25,7 +25,7 @@
     @media screen and (max-width: 850px) {
       padding: 0;
       margin: 0 64px;
-      column-gap: 37px;
+      column-gap: 40px;
     }
 
     @media screen and (max-width: 760px) {
@@ -74,11 +74,15 @@
     max-width: 305px;
 
     @media screen and (max-width: 850px) {
-      gap: 30px;
+      gap: 32px;
     }
 
     @media screen and (max-width: 500px) {
       gap: 40px;
+    }
+
+    .title {
+      margin-left: -1px;
     }
   }
 

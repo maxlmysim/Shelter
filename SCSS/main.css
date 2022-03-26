@@ -272,7 +272,7 @@ h5 {
     margin: 30px 0 30px 30px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header .nav-menu {
     display: none;
   }
@@ -280,7 +280,12 @@ h5 {
 .header .nav-menu__list {
   display: flex;
   gap: 35px;
-  margin: -3px 3px 0 0;
+  margin: 0 3px 0 0;
+}
+@media screen and (max-width: 850px) {
+  .header .nav-menu__list {
+    margin: -1px 2px 0 0;
+  }
 }
 .header .nav-menu__item_active, .header .nav-menu__item:hover {
   color: #FAFAFA;
@@ -379,6 +384,7 @@ h5 {
 }
 .start-screen__puppy {
   max-width: 698px;
+  width: 100%;
   margin: auto;
 }
 @media screen and (max-width: 1270px) {
@@ -396,14 +402,9 @@ h5 {
     max-height: 593px;
   }
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 730px) {
   .start-screen__puppy {
-    margin-left: 40px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .start-screen__puppy {
-    width: 87%;
+    position: static;
   }
 }
 
@@ -493,6 +494,7 @@ h5 {
 @media screen and (max-width: 850px) {
   .pets {
     padding-top: 80px;
+    padding-bottom: 143px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -514,7 +516,7 @@ h5 {
   }
 }
 .pets .heading {
-  width: 480px;
+  max-width: 480px;
   color: #545454;
   display: flex;
   justify-content: center;
@@ -861,7 +863,7 @@ h5 {
   .footer .container {
     padding: 0;
     margin: 0 64px;
-    column-gap: 37px;
+    column-gap: 40px;
   }
 }
 @media screen and (max-width: 760px) {
@@ -911,13 +913,16 @@ h5 {
 }
 @media screen and (max-width: 850px) {
   .footer .locations {
-    gap: 30px;
+    gap: 32px;
   }
 }
 @media screen and (max-width: 500px) {
   .footer .locations {
     gap: 40px;
   }
+}
+.footer .locations .title {
+  margin-left: -1px;
 }
 .footer__puppy {
   max-width: 300px;

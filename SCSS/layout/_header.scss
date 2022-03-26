@@ -13,14 +13,18 @@
   }
 
   .nav-menu {
-    @media screen and (max-width: $tablet-width) {
+    @media screen and (max-width: $tablet-width - 1px) {
       display: none;
     }
 
     &__list {
       display: flex;
       gap: 35px;
-      margin: -3px 3px 0 0;
+      margin: 0 3px 0 0;
+      @media screen and (max-width: 850px) {
+        margin: -1px 2px 0 0;
+      }
+
     }
 
     &__item_active, &__item:hover {
