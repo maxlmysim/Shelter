@@ -195,13 +195,12 @@ h5 {
 
 html {
   scroll-behavior: smooth;
+  background: #FFFFFF;
 }
 
 *, *:before, *:after {
   font-family: "Georgia Regular", sans-serif;
   letter-spacing: 0.06em;
-  font-weight: normal;
-  font-style: normal;
 }
 
 img {
@@ -216,7 +215,6 @@ a {
 body {
   max-width: 1280px;
   margin: 0 auto;
-  background: #FFFFFF;
 }
 
 .wrapper {
@@ -234,7 +232,11 @@ body {
 }
 .logo__subtitle {
   display: flex;
+  justify-content: "";
   align-items: center;
+  gap: 0px;
+  flex-wrap: nowrap;
+  flex-direction: row;
   color: #FFFFFF;
   padding-left: 3px;
 }
