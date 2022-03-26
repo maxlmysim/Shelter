@@ -6,8 +6,8 @@
     flex-direction: column;
 
     @media screen and (max-width: 500px) {
-      margin-top: 41px;
-      margin-bottom: 43px;
+      margin-top: 40px;
+      margin-bottom: 42px;
     }
   }
 
@@ -40,7 +40,8 @@
 
     @media screen and (max-width: 500px) {
       gap: 30px;
-      margin: 0;
+      margin: 0 0 0 5px;
+      justify-content: flex-start;
     }
   }
 
@@ -54,6 +55,7 @@
 
     @media screen and (max-width: 500px) {
       width: 130px;
+      height: 87px;
     }
   }
 

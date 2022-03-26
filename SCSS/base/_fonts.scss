@@ -41,7 +41,7 @@ h3 {
 }
 
 .h3-mobile {
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 400px) {
     @include font(2.5rem, 130%);
     text-align: center;
   }
@@ -69,7 +69,7 @@ h5 {
   @include font(1.5rem, 160%);
 
   @media screen and (max-width: 500px) {
-    text-align: justify;
+    text-align: center;
   }
 }
 
@@ -94,4 +94,18 @@ h5 {
   font-family: 'Arial', sans-serif;
   letter-spacing: 0.1em;
   @include font(1.3rem, 15px);
+}
+
+.credit-card {
+  @media screen and (max-width: 500px) {
+    font-size: 15px;
+    line-height: 110%;
+  }
+}
+
+.help__item-title {
+  @media screen and (max-width: 500px) {
+    font-size: 15px;
+    line-height: 110%;
+  }
 }

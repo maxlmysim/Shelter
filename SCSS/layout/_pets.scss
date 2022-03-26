@@ -9,7 +9,7 @@
   }
 
   @media screen and (max-width: 500px) {
-    padding-top: 43px;
+    padding-top: 42px;
     padding-bottom: 45px;
   }
 }
@@ -37,9 +37,9 @@
       margin: 0 0 0 2px;
     }
 
-    @media screen and (max-width: 500px) {
-      max-width: 290px;
-    }
+    //@media screen and (max-width: 500px) {
+    //  max-width: 290px;
+    //}
   }
 
   .slider {
@@ -50,12 +50,21 @@
     align-items: center;
     margin-bottom: 1px;
 
+    @media screen and (max-width: $tablet-width) {
+      padding: 0 30px;
+    }
+
+    @media screen and (max-width: 850px) {
+      gap: 12px;
+    }
+
     .pets-cards {
       display: flex;
       align-items: center;
       width: 100%;
       justify-content: space-between;
       gap: 15px;
+
 
       @media screen and (max-width: 980px) {
         justify-content: center;
@@ -72,15 +81,7 @@
       }
     }
 
-    @media screen and (max-width: 1270px) {
-      padding: 0 30px;
-    }
-
-    @media screen and (max-width: 850px) {
-      gap: 12px;
-    }
-
-    @media screen and (max-width: 500px) {
+      @media screen and (max-width: 500px) {
       grid-template-columns: 1fr 0 1fr;
       grid-template-rows: 435px 53px;
       grid-template-areas: "card       card    card"
@@ -126,19 +127,19 @@
   @extend %transition;
 }
 
-.arrow-left {
-  @media screen and (max-width: 500px) {
-    grid-area: arrow-left;
-    margin-left: 17px;
-  }
-}
-
-.arrow-right {
-  @media screen and (max-width: 500px) {
-    grid-area: arrow-right;
-    margin-right: 17px;
-  }
-}
+//.arrow-left {
+//  @media screen and (max-width: 500px) {
+//    grid-area: arrow-left;
+//    margin-left: 17px;
+//  }
+//}
+//
+//.arrow-right {
+//  @media screen and (max-width: 500px) {
+//    grid-area: arrow-right;
+//    margin-right: 17px;
+//  }
+//}
 
 .pets-card {
   &__photo {

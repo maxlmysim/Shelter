@@ -4,8 +4,8 @@
   padding-bottom: 101px;
 
   @media screen and (max-width: 500px) {
-    padding-top: 43px;
-    padding-bottom: 43px;
+    padding-top: 41px;
+    //padding-bottom: 43px;
   }
 }
 
@@ -21,9 +21,9 @@
       gap: 60px;
     }
 
-    @media screen and (max-width: 500px) {
-      gap: 41px;
-    }
+    //@media screen and (max-width: 500px) {
+    //  gap: 41px;
+    //}
   }
 
   &__puppy {
@@ -40,9 +40,9 @@
     @include flex('', '', 20px);
     flex-direction: column;
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: $mobile-width) {
       align-items: center;
-      gap: 24px;
+      //gap: 24px;
     }
   }
 
@@ -50,7 +50,7 @@
     color: $color-dark-l;
     max-width: 300px;
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: $mobile-width) {
       max-width: 225px;
     }
   }
@@ -60,6 +60,7 @@
 
     @media screen and (max-width: 500px) {
       letter-spacing: 0;
+      line-height: 160%;
     }
   }
 
@@ -75,20 +76,20 @@
       @extend %transition;
     }
 
-    @media screen and (max-width: 500px) {
-      width: 281px;
-    }
+    //@media screen and (max-width: 500px) {
+    //  width: 281px;
+    //}
   }
 
   .description {
     color: $color-dark-m;
     letter-spacing: normal;
 
-    @media screen and (max-width: 500px) {
-      text-align: justify;
-      padding: 0 9px;
-      margin-top: -5px;
-    }
+    //@media screen and (max-width: 500px) {
+    //  text-align: justify;
+    //  padding: 0 9px;
+    //  margin-top: -5px;
+    //}
   }
 }
 

@@ -24,8 +24,8 @@ body {
 
 .wrapper {
   margin: 0 40px;
-  @media screen and (max-width: $mobile-width) {
-    margin: 0;
+  @media screen and (max-width: 500px) {
+    margin: 0 10px;
   }
 }
 

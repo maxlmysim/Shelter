@@ -111,7 +111,7 @@ h3 {
   line-height: 45px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   .h3-mobile {
     font-size: 2.5rem;
     font-style: normal;
@@ -152,7 +152,7 @@ h5 {
 }
 @media screen and (max-width: 500px) {
   .paragraph-l {
-    text-align: justify;
+    text-align: center;
   }
 }
 
@@ -193,6 +193,20 @@ h5 {
   line-height: 15px;
 }
 
+@media screen and (max-width: 500px) {
+  .credit-card {
+    font-size: 15px;
+    line-height: 110%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .help__item-title {
+    font-size: 15px;
+    line-height: 110%;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   background: #FFFFFF;
@@ -220,9 +234,9 @@ body {
 .wrapper {
   margin: 0 40px;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
   .wrapper {
-    margin: 0;
+    margin: 0 10px;
   }
 }
 
@@ -295,6 +309,11 @@ body {
     margin: 30px 0 30px 30px;
   }
 }
+@media screen and (max-width: 500px) {
+  .header {
+    margin: 30px 0 30px 10px;
+  }
+}
 @media screen and (max-width: 767px) {
   .header .nav-menu {
     display: none;
@@ -329,6 +348,11 @@ body {
     padding-top: 150px;
   }
 }
+@media screen and (max-width: 500px) {
+  .start-screen {
+    margin-bottom: 42px;
+  }
+}
 .start-screen__container {
   display: flex;
   justify-content: space-between;
@@ -340,6 +364,11 @@ body {
     flex-direction: column;
     gap: 100px;
     align-items: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .start-screen__container {
+    gap: 105px;
   }
 }
 .start-screen__container .content {
@@ -355,9 +384,24 @@ body {
     margin-left: -153px;
   }
 }
+@media screen and (max-width: 758px) {
+  .start-screen__container .content .heading {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  .start-screen__container .content .heading {
+    letter-spacing: 0.06em;
+  }
+}
 .start-screen__container .content .subheading {
   color: #CDCDCD;
   margin: 42px 0;
+}
+@media screen and (max-width: 320px) {
+  .start-screen__container .content .subheading {
+    margin: 41px 0 42px 0;
+  }
 }
 @media screen and (max-width: 1000px) {
   .start-screen__container .content {
@@ -382,7 +426,14 @@ body {
 }
 @media screen and (max-width: 767px) {
   .start-screen__puppy {
-    margin-left: 0;
+    margin-left: 15px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .start-screen__puppy {
+    max-width: 260px;
+    max-height: 271.77px;
+    margin-left: 40px;
   }
 }
 
@@ -396,7 +447,7 @@ body {
 }
 @media screen and (max-width: 500px) {
   .about {
-    margin-bottom: 42px;
+    margin-bottom: 42.4px;
   }
 }
 
@@ -415,16 +466,17 @@ body {
 }
 @media screen and (max-width: 500px) {
   .about .container {
-    gap: 20px;
+    gap: 19px;
   }
 }
 .about__pets {
-  width: 300px;
-  height: 408px;
+  max-width: 300px;
+  max-height: 408px;
 }
 @media screen and (max-width: 500px) {
   .about__pets {
-    width: 260px;
+    max-width: 260px;
+    max-height: 353.6px;
   }
 }
 .about .content {
@@ -433,7 +485,7 @@ body {
   align-items: normal;
   gap: 0px;
   flex-direction: column;
-  width: 430px;
+  max-width: 430px;
   padding-top: 14px;
 }
 @media screen and (max-width: 850px) {
@@ -441,10 +493,12 @@ body {
     padding: 0;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 320px) {
   .about .content {
-    padding: 0 15px;
-    margin: 0 auto;
+    max-width: 270px;
+  }
+  .about .content .paragraph-l {
+    text-align: justify;
   }
 }
 .about .heading {
@@ -457,7 +511,7 @@ body {
 }
 @media screen and (max-width: 500px) {
   .about .subheading {
-    margin-bottom: 21px;
+    margin-bottom: 22px;
   }
 }
 
@@ -474,7 +528,7 @@ body {
 }
 @media screen and (max-width: 500px) {
   .pets {
-    padding-top: 43px;
+    padding-top: 42px;
     padding-bottom: 45px;
   }
 }
@@ -502,11 +556,6 @@ body {
     margin: 0 0 0 2px;
   }
 }
-@media screen and (max-width: 500px) {
-  .pets .heading {
-    max-width: 290px;
-  }
-}
 .pets .slider {
   display: grid;
   grid-template-columns: 1fr minmax(280px, 990px) 1fr;
@@ -514,6 +563,16 @@ body {
   gap: 52px;
   align-items: center;
   margin-bottom: 1px;
+}
+@media screen and (max-width: 768px) {
+  .pets .slider {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .pets .slider {
+    gap: 12px;
+  }
 }
 .pets .slider .pets-cards {
   display: flex;
@@ -537,16 +596,6 @@ body {
   .pets .slider .pets-cards {
     grid-area: card;
     gap: 0;
-  }
-}
-@media screen and (max-width: 1270px) {
-  .pets .slider {
-    padding: 0 30px;
-  }
-}
-@media screen and (max-width: 850px) {
-  .pets .slider {
-    gap: 12px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -589,20 +638,6 @@ body {
   box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
-@media screen and (max-width: 500px) {
-  .arrow-left {
-    grid-area: arrow-left;
-    margin-left: 17px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .arrow-right {
-    grid-area: arrow-right;
-    margin-right: 17px;
-  }
-}
-
 .pets-card__photo {
   width: 270px;
 }
@@ -621,8 +656,8 @@ body {
 }
 @media screen and (max-width: 500px) {
   .help .content {
-    margin-top: 41px;
-    margin-bottom: 43px;
+    margin-top: 40px;
+    margin-bottom: 42px;
   }
 }
 .help .heading {
@@ -660,7 +695,8 @@ body {
 @media screen and (max-width: 500px) {
   .help__list {
     gap: 30px;
-    margin: 0;
+    margin: 0 0 0 5px;
+    justify-content: flex-start;
   }
 }
 .help__item {
@@ -678,6 +714,7 @@ body {
 @media screen and (max-width: 500px) {
   .help__item {
     width: 130px;
+    height: 87px;
   }
 }
 .help__item-icon {
@@ -709,8 +746,7 @@ body {
 }
 @media screen and (max-width: 500px) {
   .donation {
-    padding-top: 43px;
-    padding-bottom: 43px;
+    padding-top: 41px;
   }
 }
 
@@ -730,11 +766,6 @@ body {
     gap: 60px;
   }
 }
-@media screen and (max-width: 500px) {
-  .donation .container {
-    gap: 41px;
-  }
-}
 .donation__puppy {
   max-width: 505px;
   max-height: 261px;
@@ -752,17 +783,16 @@ body {
   gap: 20px;
   flex-direction: column;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 320px) {
   .donation .content {
     align-items: center;
-    gap: 24px;
   }
 }
 .donation .heading {
   color: #545454;
   max-width: 300px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 320px) {
   .donation .heading {
     max-width: 225px;
   }
@@ -773,6 +803,7 @@ body {
 @media screen and (max-width: 500px) {
   .donation .subheading {
     letter-spacing: 0;
+    line-height: 160%;
   }
 }
 .donation .credit-card {
@@ -788,21 +819,9 @@ body {
 .donation .credit-card:hover {
   background: #FDDCC4;
 }
-@media screen and (max-width: 500px) {
-  .donation .credit-card {
-    width: 281px;
-  }
-}
 .donation .description {
   color: #B2B2B2;
   letter-spacing: normal;
-}
-@media screen and (max-width: 500px) {
-  .donation .description {
-    text-align: justify;
-    padding: 0 9px;
-    margin-top: -5px;
-  }
 }
 
 .credit-card__svg {
@@ -851,7 +870,7 @@ body {
     column-gap: 40px;
   }
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 767px) {
   .footer .container {
     grid-template-rows: 208px 222px 1fr;
     grid-template-columns: 1fr;
@@ -859,11 +878,6 @@ body {
     row-gap: 40px;
     column-gap: 0;
     margin: 0 10px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .footer .container {
-    margin: 0;
   }
 }
 .footer .contacts,
@@ -882,12 +896,6 @@ body {
     gap: 42px;
   }
 }
-@media screen and (max-width: 500px) {
-  .footer .contacts,
-.footer .locations {
-    align-items: center;
-  }
-}
 .footer .contacts {
   grid-area: contacts;
 }
@@ -899,11 +907,6 @@ body {
 @media screen and (max-width: 850px) {
   .footer .locations {
     gap: 32px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .footer .locations {
-    gap: 40px;
   }
 }
 .footer .locations .title {
@@ -939,21 +942,6 @@ body {
   }
   .footer .boston .locations__address {
     margin-bottom: 8px;
-  }
-}
-@media screen and (max-width: 850px) and (max-width: 500px) {
-  .footer .boston .locations__address {
-    margin-bottom: 3px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .footer .title {
-    width: 90vw;
-  }
-}
-@media screen and (max-width: 500px) {
-  .footer .address {
-    width: 265px;
   }
 }
 .footer .mail__address-text,
