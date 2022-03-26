@@ -1,19 +1,13 @@
 .header {
   position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(space-between, center);
   max-width: 1200px;
   width: calc(100% - 60px);
-  margin: 60px 0 0 41px;
+  margin: 60px 0 0 40px;
   color: $color-dark-s;
 
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: $tablet-width) {
     margin: 30px 0 30px 30px;
-  }
-
-  @media screen and (max-width: 850px) {
-    margin: 30px 0 0 10px;
   }
 
   .nav-menu {
@@ -22,13 +16,11 @@
     }
 
     &__list {
-      display: flex;
-      gap: 35px;
-      margin: 0 3px 0 0;
-      @media screen and (max-width: 850px) {
+      @include flex('', '', 35px);
+      margin: 0 2px 0 0;
+      @media screen and (max-width: $tablet-width) {
         margin: -1px 2px 0 0;
       }
-
     }
 
     &__item_active, &__item:hover {
