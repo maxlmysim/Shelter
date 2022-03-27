@@ -80,8 +80,8 @@ h5 {
 }
 
 .paragraph-mobile-menu {
-  @include font(3.2rem, 160%);
-  @media screen and (max-width: $tablet-width) {
+  @media screen and (max-width: $tablet-width - 1px) {
+    @include font(3.2rem, 160%);
     font-family: 'Arial', sans-serif;
   }
 }

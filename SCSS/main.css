@@ -165,14 +165,12 @@ h5 {
   line-height: 150%;
 }
 
-.paragraph-mobile-menu {
-  font-size: 3.2rem;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 160%;
-}
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .paragraph-mobile-menu {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 160%;
     font-family: "Arial", sans-serif;
   }
 }
@@ -304,9 +302,55 @@ body {
   margin: 60px 0 0 40px;
   color: #CDCDCD;
 }
+.header .logo {
+  z-index: 10;
+}
+.header .burger {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .header {
     margin: 30px 0 30px 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header .burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 22px;
+    z-index: 50;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  .header .burger span, .header .burger:before, .header .burger:after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #F1CDB3;
+    transition: all 0.3s ease-in-out;
+  }
+  .header .burger span {
+    left: 0;
+    top: 10px;
+  }
+  .header .burger:before, .header .burger:after {
+    content: "";
+  }
+  .header .burger:before {
+    top: 0;
+  }
+  .header .burger:after {
+    bottom: 0;
+  }
+  .header .burger:hover:before {
+    top: 2px;
+  }
+  .header .burger:hover:after {
+    bottom: 2px;
+  }
+  .header .burger_open {
+    transform: rotate(90deg);
   }
 }
 @media screen and (max-width: 500px) {
@@ -316,7 +360,17 @@ body {
 }
 @media screen and (max-width: 767px) {
   .header .nav-menu {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    max-width: 320px;
+    width: 100%;
+    height: 100%;
+    background: #292929;
+    transition: all 0.5s ease-in-out;
+  }
+  .header .nav-menu_open {
+    right: 0;
   }
 }
 .header .nav-menu__list {
@@ -329,6 +383,14 @@ body {
 @media screen and (max-width: 768px) {
   .header .nav-menu__list {
     margin: -1px 2px 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header .nav-menu__list {
+    padding-top: 248px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
   }
 }
 .header .nav-menu__item_active, .header .nav-menu__item:hover {
@@ -1083,6 +1145,9 @@ body {
 }
 .header.our-pets .nav-menu__item:hover {
   color: #292929;
+}
+.header.our-pets .burger {
+  background-color: #000000;
 }
 
 .main.our-pets {

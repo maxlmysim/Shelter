@@ -6,8 +6,70 @@
   margin: 60px 0 0 40px;
   color: $color-dark-s;
 
+  .logo {
+    z-index: 10;
+  }
+
+  .burger {
+    display: none
+  }
+
   @media screen and (max-width: $tablet-width) {
     margin: 30px 0 30px 30px;
+  }
+
+  @media screen and (max-width: $tablet-width - 1px) {
+    .burger {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 22px;
+      z-index: 50;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      span,
+      &:before,
+      &:after {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $color-primary;
+        transition: all 0.3s ease-in-out;
+      }
+
+      span {
+        left: 0;
+        top: 10px;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+      }
+
+      &:before {
+        top: 0;
+      }
+
+      &:after {
+        bottom: 0;
+      }
+
+      &:hover {
+        &:before {
+          top: 2px;
+        }
+
+        &:after {
+          bottom: 2px;
+        }
+      }
+
+      &_open {
+        transform: rotate(90deg);
+      }
+    }
   }
 
   @media screen and (max-width: 500px) {
@@ -16,14 +78,33 @@
 
   .nav-menu {
     @media screen and (max-width: $tablet-width - 1px) {
-      display: none;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      max-width: 320px;
+      width: 100%;
+      height: 100%;
+      background: $color-dark-3xl;
+      transition: all 0.5s ease-in-out;
+
+      &_open {
+        right: 0;
+      }
     }
 
     &__list {
       @include flex('', '', 35px);
       margin: 0 2px 0 0;
+
       @media screen and (max-width: $tablet-width) {
         margin: -1px 2px 0 0;
+      }
+
+      @media screen and (max-width: $tablet-width - 1px) {
+        padding-top: 248px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
       }
     }
 
@@ -40,4 +121,5 @@
       border-bottom: 3px solid $color-primary;
     }
   }
+
 }
