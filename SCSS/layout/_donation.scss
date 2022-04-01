@@ -42,8 +42,6 @@
 
     @media screen and (max-width: $mobile-width) {
       align-items: center;
-      //gap: 24px;
-      margin-left: -2px;
     }
   }
 
@@ -93,8 +91,8 @@
 
     @media screen and (max-width: 500px) {
       text-align: justify;
-      padding: 0 9px;
-      width: 298px;
+      padding: 0 5px;
+      width: 290px;
     }
   }
 }

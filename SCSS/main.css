@@ -506,7 +506,7 @@ body {
 }
 @media screen and (max-width: 450px) {
   .not-only__puppy {
-    max-width: 259px;
+    max-width: 255px;
     max-height: 271.77px;
     margin-left: 38px;
   }
@@ -862,7 +862,6 @@ body {
 @media screen and (max-width: 320px) {
   .donation .content {
     align-items: center;
-    margin-left: -2px;
   }
 }
 .donation .heading {
@@ -912,8 +911,8 @@ body {
 @media screen and (max-width: 500px) {
   .donation .description {
     text-align: justify;
-    padding: 0 9px;
-    width: 298px;
+    padding: 0 5px;
+    width: 290px;
   }
 }
 
