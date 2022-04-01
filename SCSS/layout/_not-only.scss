@@ -1,4 +1,4 @@
-.start-screen {
+.not-only {
   background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
   padding-top: 180px;
   margin-bottom: 80px;
@@ -11,7 +11,7 @@
     margin-bottom: 42px;
   }
 
-  // .start-screen__container
+  // .not-only__container
   &__container {
     @include flex(space-between);
 
@@ -62,7 +62,7 @@
     }
   }
 
-  // .start-screen__puppy
+  // .not-only__puppy
   &__puppy {
     width: (698 / 1200) * 100%;
 

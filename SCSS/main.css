@@ -408,73 +408,73 @@ body {
   border-bottom: 3px solid #F1CDB3;
 }
 
-.start-screen {
+.not-only {
   background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
   padding-top: 180px;
   margin-bottom: 80px;
 }
 @media screen and (max-width: 1000px) {
-  .start-screen {
+  .not-only {
     padding-top: 150px;
   }
 }
 @media screen and (max-width: 500px) {
-  .start-screen {
+  .not-only {
     margin-bottom: 42px;
   }
 }
-.start-screen__container {
+.not-only__container {
   display: flex;
   justify-content: space-between;
   align-items: normal;
   gap: 0px;
 }
 @media screen and (max-width: 1000px) {
-  .start-screen__container {
+  .not-only__container {
     flex-direction: column;
     gap: 100px;
     align-items: center;
   }
 }
 @media screen and (max-width: 320px) {
-  .start-screen__container {
+  .not-only__container {
     gap: 105px;
   }
 }
-.start-screen__container .content {
+.not-only__container .content {
   margin-top: 163px;
   max-width: 460px;
 }
-.start-screen__container .content .heading {
+.not-only__container .content .heading {
   color: #FFFFFF;
   letter-spacing: 0;
 }
 @media screen and (max-width: 1000px) {
-  .start-screen__container .content .heading {
+  .not-only__container .content .heading {
     margin-left: -153px;
   }
 }
 @media screen and (max-width: 758px) {
-  .start-screen__container .content .heading {
+  .not-only__container .content .heading {
     margin-left: 0;
   }
 }
 @media screen and (max-width: 320px) {
-  .start-screen__container .content .heading {
+  .not-only__container .content .heading {
     letter-spacing: 0.06em;
   }
 }
-.start-screen__container .content .subheading {
+.not-only__container .content .subheading {
   color: #CDCDCD;
   margin: 42px 0;
 }
 @media screen and (max-width: 320px) {
-  .start-screen__container .content .subheading {
+  .not-only__container .content .subheading {
     margin: 41px 0 42px 0;
   }
 }
 @media screen and (max-width: 1000px) {
-  .start-screen__container .content {
+  .not-only__container .content {
     margin: 0;
     display: flex;
     justify-content: "";
@@ -483,11 +483,11 @@ body {
     flex-direction: column;
   }
 }
-.start-screen__puppy {
+.not-only__puppy {
   width: 58.1666666667%;
 }
 @media screen and (max-width: 1000px) {
-  .start-screen__puppy {
+  .not-only__puppy {
     margin-left: 140px;
     width: 100%;
     max-width: 569px;
@@ -495,12 +495,12 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
-  .start-screen__puppy {
+  .not-only__puppy {
     margin-left: 15px;
   }
 }
 @media screen and (max-width: 450px) {
-  .start-screen__puppy {
+  .not-only__puppy {
     max-width: 259px;
     max-height: 271.77px;
     margin-left: 40px;
