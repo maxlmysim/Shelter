@@ -443,7 +443,7 @@ body {
 }
 @media screen and (max-width: 320px) {
   .not-only__container {
-    gap: 105px;
+    gap: 110px;
   }
 }
 .not-only__container .content {
@@ -927,6 +927,10 @@ body {
   .credit-card__number {
     font-size: 15px;
     line-height: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
   }
 }
 
