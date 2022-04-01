@@ -232,6 +232,11 @@ body {
 .wrapper {
   margin: 0 40px;
 }
+@media screen and (max-width: 778px) {
+  .wrapper {
+    margin: 0 30px;
+  }
+}
 @media screen and (max-width: 500px) {
   .wrapper {
     margin: 0 10px;
@@ -503,7 +508,7 @@ body {
   .not-only__puppy {
     max-width: 259px;
     max-height: 271.77px;
-    margin-left: 40px;
+    margin-left: 38px;
   }
 }
 
@@ -593,7 +598,7 @@ body {
 @media screen and (max-width: 850px) {
   .pets {
     padding-top: 80px;
-    padding-bottom: 143px;
+    padding-bottom: 103px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -633,11 +638,6 @@ body {
   gap: 52px;
   align-items: center;
   margin-bottom: 1px;
-}
-@media screen and (max-width: 768px) {
-  .pets .slider {
-    padding: 0 30px;
-  }
 }
 @media screen and (max-width: 850px) {
   .pets .slider {
@@ -946,7 +946,7 @@ body {
   grid-template-columns: 300px 320px 300px;
   grid-template-areas: "contacts location puppy";
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 990px) {
   .footer .container {
     grid-template-rows: 234px 1fr;
     grid-template-columns: 1fr 1fr;
@@ -1027,7 +1027,7 @@ body {
   max-width: 300px;
   grid-area: puppy;
 }
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 990px) {
   .footer__puppy {
     grid-column-start: span 2;
   }

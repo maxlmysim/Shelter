@@ -24,6 +24,9 @@ body {
 
 .wrapper {
   margin: 0 40px;
+  @media screen and (max-width: $tablet-width + 10px) {
+    margin: 0 30px;
+  }
   @media screen and (max-width: 500px) {
     margin: 0 10px;
   }

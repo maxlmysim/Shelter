@@ -12,7 +12,7 @@
     grid-template-columns: 300px 320px 300px;
     grid-template-areas: "contacts location puppy";
 
-    @media screen and (max-width: 980px) {
+    @media screen and (max-width: 990px) {
       grid-template-rows: 234px 1fr;
       grid-template-columns: 1fr 1fr;
       grid-template-areas: "contacts location"
@@ -90,7 +90,7 @@
     max-width: 300px;
     grid-area: puppy;
 
-    @media screen and (max-width: 980px) {
+    @media screen and (max-width: 990px) {
       grid-column-start: span 2;
     }
 
