@@ -1,153 +1,110 @@
 .pets {
+  padding: 80px 0 100px;
   background: $color-light-l;
-  padding-top: 80px;
-  padding-bottom: 100px;
-
-  @media screen and (max-width: 850px) {
-    padding-top: 80px;
-    padding-bottom: 103px;
-  }
 
   @media screen and (max-width: 500px) {
-    padding-top: 42px;
-    padding-bottom: 45px;
+    padding: 42px 0 45px;
   }
-}
 
-.pets {
   .content {
-    display: flex;
+    @include flex(center, center, 60px);
     flex-direction: column;
-    align-items: center;
-    gap: 59px;
-
     @media screen and (max-width: 500px) {
-      gap: 40px;
+      gap: 41px;
     }
   }
 
   .heading {
-    max-width: 480px;
-    color: $color-dark-l;
-    display: flex;
-    justify-content:center;
     text-align: center;
-
-    @media screen and (max-width: 850px) {
-      margin: 0 0 0 2px;
-    }
-
-    //@media screen and (max-width: 500px) {
-    //  max-width: 290px;
-    //}
   }
 
   .slider {
-    display: grid;
-    grid-template-columns: 1fr minmax(280px, 990px) 1fr;
     width: 100%;
-    gap: 52px;
-    align-items: center;
-    margin-bottom: 1px;
+    @include flex(space-between, center);
 
-    @media screen and (max-width: $tablet-width) {
-      //padding: 0 30px;
-    }
-
-    @media screen and (max-width: 850px) {
-      gap: 12px;
-    }
-
-    .pets-cards {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      justify-content: space-between;
-      gap: 15px;
-
-
-      @media screen and (max-width: 980px) {
-        justify-content: center;
-        gap: 43px;
-      }
-
-      @media screen and (max-width: 760px) {
-        justify-content: center;
-      }
-
-      @media screen and (max-width: 500px) {
-        grid-area: card;
-        gap: 0;
-      }
-    }
-
-      @media screen and (max-width: 500px) {
-      grid-template-columns: 1fr 0 1fr;
-      grid-template-rows: 435px 53px;
-      grid-template-areas: "card       card    card"
-                           "arrow-left   .     arrow-right ";
-      justify-items: center;
-      padding: 0;
+    @media screen and (max-width: 500px) {
+      flex-wrap: wrap;
+      justify-content: center;
       row-gap: 20px;
-      column-gap: 0;
+      column-gap: 80px;
+      .pets-card {
+        order: 5;
+      }
+      .arrow-left {
+        order: 3;
+      }
+      .arrow-right {
+        order: 4;
+      }
     }
   }
 }
 
-.pets-card {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-  background: $color-light-s;
-  grid-area: card;
-  border-radius: 9px;
 
-  .button {
-    margin-bottom: 30px;
-    padding: 15px 43px;
-
-  }
-
-  &:last-child {
-    @media screen and (max-width: 980px) {
-      display: none;
-    }
-  }
-
-  &:nth-child(2) {
-    @media screen and (max-width: 760px) {
-      display: none;
-    }
-  }
+.arrow-left {
 }
 
-.pets-card:hover {
-  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
-  @extend %transition;
+.switch {
 }
 
-//.arrow-left {
-//  @media screen and (max-width: 500px) {
-//    grid-area: arrow-left;
-//    margin-left: 17px;
-//  }
-//}
-//
-//.arrow-right {
-//  @media screen and (max-width: 500px) {
-//    grid-area: arrow-right;
-//    margin-right: 17px;
-//  }
-//}
+.pets-cards {
+  @include flex(space-between, center);
+  width: 82.5%;
 
-.pets-card {
-  &__photo {
+  @media screen and (max-width: 1100px) {
+    width: 81.5%;
+  }
+
+  @media screen and (max-width: $tablet-width - 1px) {
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
+
+  .pets-card {
     width: 270px;
-  }
+    height: 435px;
+    @include flex(center, center, 30px);
+    flex-direction: column;
+    background: $color-light-s;
+    border-radius: 9px;
 
-  &__title {
-    color: $color-dark-l;
-  }
+    @media screen and (max-width: 1100px) {
+      &:last-child {
+        display: none
+      }
+    }
 
+    @media screen and (max-width: $tablet-width - 1px) {
+      &:nth-last-child(2) {
+        display: none
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+    }
+
+    // .pets-card__photo
+    &__photo {
+
+    }
+
+    // .pets-card__title
+    &__title {
+    }
+
+    .button {
+      // .button_transparent
+      &_transparent {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+
+.arrow-right {
 }
