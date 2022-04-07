@@ -72,3 +72,15 @@ let petsCards = document.querySelector('.pets-cards');
 pets.forEach(pet => {
     petsCards.append(createPetCard(pet));
 });
+
+
+let arrowLeft = document.querySelector('.arrow-left'),
+    arrowRight = document.querySelector('.arrow-right');
+
+arrowLeft.addEventListener('click', function (){
+    petsCards.scrollLeft += 360;
+})
+
+arrowRight.addEventListener('click', function (){
+    petsCards.scrollLeft -= 360;
+})
