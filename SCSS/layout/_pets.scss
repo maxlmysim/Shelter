@@ -88,6 +88,11 @@
 
     &:hover {
       box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+
+      .button {
+        background: $color-primary-light;
+        @extend %transition;
+      }
     }
 
     // .pets-card__photo

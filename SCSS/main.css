@@ -1,4 +1,4 @@
-.donation .credit-card:hover, .header .nav-menu__item_active, .header .nav-menu__item:hover, .switch:hover, .switch_active, .button:hover {
+.donation .credit-card:hover, .pets-cards .pets-card:hover .button, .header .nav-menu__item_active, .header .nav-menu__item:hover, .switch:hover, .switch_active, .button:hover {
   transition: all 0.3s ease-in-out;
 }
 
@@ -686,6 +686,9 @@ body {
 }
 .pets-cards .pets-card:hover {
   box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+.pets-cards .pets-card:hover .button {
+  background: #FDDCC4;
 }
 .pets-cards .pets-card .button_transparent {
   margin-bottom: 30px;
