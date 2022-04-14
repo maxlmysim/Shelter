@@ -1,26 +1,17 @@
 import pets from '../../script/our-pets.js';
 
 const burger = document.querySelector('.burger');
-const page = document.querySelector('.page');
-page.style.height = document.documentElement.clientHeight + 'px';
+const body = document.body;
 
 burger.addEventListener('click', function () {
     burger.classList.toggle('burger_open');
     document.querySelector('.nav-menu').classList.toggle('nav-menu_open');
-    page.classList.toggle('page-shadow');
+    body.classList.toggle('body-hide');
     let navigation = document.querySelector('.nav-menu');
     navigation.addEventListener('click', function (event) {
         if (event.target.classList.contains('paragraph-mobile-menu')) {
             burger.classList.remove('burger_open');
             document.querySelector('.nav-menu').classList.remove('nav-menu_open');
-            page.classList.remove('page-shadow');
-        }
-    });
-    page.addEventListener('click', function (event) {
-        if (event.target.classList.contains('page-shadow')) {
-            burger.classList.remove('burger_open');
-            document.querySelector('.nav-menu').classList.remove('nav-menu_open');
-            page.classList.remove('page-shadow');
         }
     });
 });
@@ -85,15 +76,13 @@ pets.forEach(pet => {
 
 
 let arrowLeft = document.querySelector('.arrow-left'),
-    arrowRight = document.querySelector('.arrow-right'),
-    position = 0;
+    arrowRight = document.querySelector('.arrow-right');
 
-arrowLeft.addEventListener('click', function () {
-    petsCards.style.transform = `translate3d(${position}px, 0px, 0px)`
-    position += 360;
-});
-
-arrowRight.addEventListener('click', function () {
-    petsCards.style.transform = `translate3d(${position}px, 0px, 0px)`
-    position -= 360;
-});
+// arrowLeft.addEventListener('click', function (){
+//     petsCards.scrollLeft += 360;
+//     console.log(1321);
+// })
+//
+// arrowRight.addEventListener('click', function (){
+//     petsCards.scrollLeft -= 360;
+// })

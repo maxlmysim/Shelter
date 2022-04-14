@@ -3,6 +3,20 @@ html {
   background: $color-light-xl;
 }
 
+.page {
+  &.page-shadow:before {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color:rgba(41, 41, 41, 0.6);
+  }
+}
+
 *, *:before, *:after {
   font-family: "Georgia Regular", sans-serif;
   letter-spacing: $spacing;

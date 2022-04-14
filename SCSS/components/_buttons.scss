@@ -29,15 +29,23 @@
   background: rgba(255, 255, 255, 0);
   font-size: 1.4rem;
 
-  &:hover,
-  &_active {
+  &:hover  {
     background: $color-primary-light;
     @extend %transition;
+  }
+
+  &_active {
+    cursor:default;
+    background: $color-primary;
+    &:hover {
+      background: $color-primary;
+    }
   }
 
   &_inactive {
     color: $color-dark-s;
     border-color: $color-dark-s;
+    cursor: default;
 
     &:hover {
       background: none;

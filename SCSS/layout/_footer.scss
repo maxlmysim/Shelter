@@ -58,6 +58,7 @@
 
   .contacts {
     grid-area: contacts;
+    max-width: 300px;
   }
 
   .locations {
@@ -155,7 +156,7 @@
   }
 
   &:before {
-    background: url('../../assets/icons/icon-email.svg') no-repeat;
+    background: url('../assets/icons/icon-email.svg') no-repeat;
     left: -1px;
     top: -2px;
 
@@ -169,7 +170,7 @@
   padding-top: 8px;
 
   &:before {
-    background: url('../../assets/icons/icon-phone.svg') no-repeat;
+    background: url('../assets/icons/icon-phone.svg') no-repeat;
     left: 0;
     top: 4px;
 
@@ -184,7 +185,7 @@
 
   &:before {
     content: '';
-    background: url('../../assets/icons/icon-marker.svg') no-repeat;
+    background: url('../assets/icons/icon-marker.svg') no-repeat;
     width: 40px;
     height: 32px;
     display: inline-block;

@@ -15,6 +15,9 @@
             <p class="logo__subtitle">Shelter for pets in Boston</p>
         </a>
     </div>
+    <div class="burger">
+        <span></span>
+    </div>
     <nav class="nav-menu">
         <ul class="nav-menu__list">
             <li class="nav-menu__item paragraph-l">
@@ -24,7 +27,8 @@
                 <a href="../pets/index.html"><p class="paragraph-l paragraph-mobile-menu">Our pets</p></a>
             </li>
             <li class="nav-menu__item paragraph-l">
-                <a href="../main/index.html#help-shelter"><p class="paragraph-l paragraph-mobile-menu">Help the shelter</p></a>
+                <a href="../main/index.html#help-shelter"><p class="paragraph-l paragraph-mobile-menu">Help the
+                    shelter</p></a>
             </li>
             <li class="nav-menu__item paragraph-l">
                 <a href="#contacts"><p class="paragraph-l paragraph-mobile-menu">Contacts</p></a>
@@ -36,54 +40,13 @@
     <div class="wrapper content">
         <h3 class="heading h3-mobile">Our friends who<br> are looking for a house</h3>
         <div class="slider">
-            <div class="pets-cards">
-                <div class="pets-card">
-                    <img src="../../assets/images/pets-katrine.png" alt="Katrine" class="pets-card__photo">
-                    <h4 class="pets-card__name">Katrine</h4>
-                    <button class="button button_transparent">Learn more</button>
-                </div>
-                <div class="pets-card">
-                    <img src="../../assets/images/pets-jennifer.png" alt="Jennifer" class="pets-card__photo">
-                    <h4 class="pets-card__name">Jennifer</h4>
-                    <button class="button button_transparent">Learn more</button>
-                </div>
-                <div class="pets-card">
-                    <img src="../../assets/images/pets-woody.png" alt="Woody" class="pets-card__photo">
-                    <h4 class="pets-card__name">Woody</h4>
-                    <button class="button button_transparent">Learn more</button>
-                </div>
-                <div class="pets-card">
-                    <img src="../../assets/images/pets-sophia.png" alt="Sophia" class="pets-card__photo">
-                    <h4 class="pets-card__name">Sophia</h4>
-                    <button class="button button_transparent">Learn more</button>
-                </div>
-                <div class="pets-card">
-                    <img src="../../assets/images/pets-timmy.png" alt="Timmy" class="pets-card__photo">
-                    <h4 class="pets-card__name">Timmy</h4>
-                    <button class="button button_transparent">Learn more</button>
-                </div>
-                <div class="pets-card">
-                    <img src="../../assets/images/pets-charly.png" alt="Charly" class="pets-card__photo">
-                    <h4 class="pets-card__name">Charly</h4>
-                    <button class="button button_transparent">Learn more</button>
-                </div>
-                <div class="pets-card">
-                    <img src="../../assets/images/pets-scarlett.png" alt="Scarlett" class="pets-card__photo">
-                    <h4 class="pets-card__name">Scarlett</h4>
-                    <button class="button button_transparent">Learn more</button>
-                </div>
-                <div class="pets-card">
-                    <img src="../../assets/images/pets-freddie.png" alt="Freddie" class="pets-card__photo">
-                    <h4 class="pets-card__name">Freddie</h4>
-                    <button class="button button_transparent">Learn more</button>
-                </div>
-            </div>
+            <div class="pets-cards"></div>
             <div class="slider-navigation">
-                <button class="switch switch-slider switch_inactive"><<</button>
-                <button class="switch switch-slider switch_inactive"><</button>
-                <button class="switch switch-slider switch_active">1</button>
-                <button class="switch switch-slider">></button>
-                <button class="switch switch-slider">>></button>
+                <button class="switch switch-slider start-slide switch_inactive"><<</button>
+                <button class="switch switch-slider pre-slide switch_inactive"><</button>
+                <button class="switch switch-slider current-page switch_active">1</button>
+                <button class="switch switch-slider next-slide">></button>
+                <button class="switch switch-slider last-slide">>></button>
             </div>
         </div>
     </div>
@@ -121,5 +84,6 @@
         <img class="footer__puppy" src="../../assets/images/footer-puppy.png" alt="puppy">
     </div>
 </footer>
+<script type="module" src="script.js"></script>
 </body>
 </html>
