@@ -77,23 +77,40 @@ function createPetCard(obj) {
     return petsCard;
 }
 
-let petsCards = document.querySelector('.pets-cards');
+
+let slider = document.querySelector('.slider'),
+    petsCards = slider.querySelector('.pets-cards'),
+    arrowLeft = slider.querySelector('.arrow-left'),
+    arrowRight = slider.querySelector('.arrow-right');
 
 pets.forEach(pet => {
     petsCards.append(createPetCard(pet));
 });
 
 
-let arrowLeft = document.querySelector('.arrow-left'),
-    arrowRight = document.querySelector('.arrow-right'),
-    position = 0;
+let slides = petsCards.querySelectorAll('.pets-card'),
+    slideWidth = slides[0].offsetWidth,
+    slideIndex = 0,
+    transition = true,
+    slide = function () {
+        if (transition) {
+            petsCards.style.transition = 'transform .5s';
+        }
+        petsCards.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
+    };
 
-arrowLeft.addEventListener('click', function () {
-    petsCards.style.transform = `translate3d(${position}px, 0px, 0px)`
-    position += 360;
+
+slider.addEventListener('click', function () {
+    let target = event.target;
+
+    if (target.classList.contains('arrow-left')) {
+        slideIndex--;
+    } else if (target.classList.contains('arrow-right')) {
+        slideIndex++;
+    } else {
+        return;
+    }
+
+    slide();
 });
 
-arrowRight.addEventListener('click', function () {
-    petsCards.style.transform = `translate3d(${position}px, 0px, 0px)`
-    position -= 360;
-});
