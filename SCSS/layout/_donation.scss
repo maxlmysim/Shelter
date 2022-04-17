@@ -89,8 +89,11 @@
     color: $color-dark-m;
     letter-spacing: normal;
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: $tablet-width - 1px) {
       text-align: justify;
+    }
+
+    @media screen and (max-width: 500px) {
       padding: 0 5px;
       width: 290px;
     }

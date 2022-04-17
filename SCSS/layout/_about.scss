@@ -44,14 +44,14 @@
       padding: 0;
     }
 
-    @media screen and (max-width: $mobile-width) {
-      //padding: 0 15px;
-      //margin: 0 auto;
-      max-width: 270px;
-
+    @media screen and (max-width: $tablet-width - 1px) {
       .paragraph-l {
         text-align: justify;
       }
+    }
+
+    @media screen and (max-width: $mobile-width) {
+      max-width: 270px;
     }
   }
 

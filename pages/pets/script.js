@@ -70,9 +70,9 @@ function createPetCard(obj) {
 
 let petsCards = document.querySelector('.pets-cards');
 
-pets.forEach(pet => {
-    petsCards.append(createPetCard(pet));
-});
+// pets.forEach(pet => {
+//     petsCards.append(createPetCard(pet));
+// });
 
 
 let arrowLeft = document.querySelector('.arrow-left'),

@@ -54,6 +54,10 @@
       margin: 0;
       gap: 42px;
     }
+
+    @media screen and (max-width: $tablet-width - 1px) {
+      align-items: center;
+    }
   }
 
   .contacts {
@@ -69,6 +73,10 @@
 
     @media screen and (max-width: 850px) {
       gap: 32px;
+    }
+
+    @media screen and (max-width: $tablet-width - 1px) {
+      align-items: normal;
     }
 
     @media screen and (max-width: 500px) {

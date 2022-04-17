@@ -83,9 +83,9 @@ let slider = document.querySelector('.slider'),
     arrowLeft = slider.querySelector('.arrow-left'),
     arrowRight = slider.querySelector('.arrow-right');
 
-pets.forEach(pet => {
-    petsCards.append(createPetCard(pet));
-});
+// pets.forEach(pet => {
+//     petsCards.append(createPetCard(pet));
+// });
 
 
 let slides = petsCards.querySelectorAll('.pets-card'),
@@ -100,17 +100,17 @@ let slides = petsCards.querySelectorAll('.pets-card'),
     };
 
 
-slider.addEventListener('click', function () {
-    let target = event.target;
-
-    if (target.classList.contains('arrow-left')) {
-        slideIndex--;
-    } else if (target.classList.contains('arrow-right')) {
-        slideIndex++;
-    } else {
-        return;
-    }
-
-    slide();
-});
+// slider.addEventListener('click', function () {
+//     let target = event.target;
+//
+//     if (target.classList.contains('arrow-left')) {
+//         slideIndex--;
+//     } else if (target.classList.contains('arrow-right')) {
+//         slideIndex++;
+//     } else {
+//         return;
+//     }
+//
+//     slide();
+// });
 

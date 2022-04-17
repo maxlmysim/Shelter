@@ -7,7 +7,7 @@
   background: #FFFFFF;
   margin: 0;
   top: 0;
-z-index: 2;
+  z-index: 2;
 
   @media screen and (max-width: $tablet-width) {
     padding: 30px;
@@ -40,6 +40,10 @@ z-index: 2;
 
   .nav-menu__item:hover {
     color: $color-dark-3xl;
+    @extend %transition;
+    @media screen and (max-width: $tablet-width - 1px) {
+      color: $color-light-s;
+    }
   }
 
   .burger {
@@ -111,20 +115,22 @@ z-index: 2;
     margin-bottom: 60px;
     width: 100%;
 
+    @media screen and (max-width: $content-width - 1px) {
+      .pets-card:nth-last-child(2) {
+        display: none
+      }
+    }
 
     @media screen and (max-width: $tablet-width) {
       width: 82%;
       margin: 0 auto 40px;
-      .pets-card:nth-last-child(2) {
-        display: none
-      }
     }
 
     @media screen and (max-width: $tablet-width - 10px) {
       justify-content: center;
     }
 
-    @media screen and (max-width: $mobile-width) {
+    @media screen and (max-width: $tablet-width - 1px) {
       .pets-card:nth-last-child(3),
       .pets-card:nth-last-child(4),
       .pets-card:nth-last-child(5) {
