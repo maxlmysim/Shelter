@@ -13,12 +13,6 @@
     padding: 30px;
   }
 
-  @media screen and (max-width: $tablet-width - 1px) {
-    color: $color-dark-s;
-
-
-  }
-
   @media screen and (max-width: $mobile-width) {
     padding: 30px 53px 30px 10px;
   }
@@ -27,23 +21,18 @@
     color: $color-dark-l;
   }
 
+  .nav-menu {
+    background-color: $color-light-xl;
+  }
+
   .logo__subtitle,
   .nav-menu__item_active {
     color: $color-dark-3xl;
   }
 
-  .nav-menu__item_active {
-    @media screen and (max-width: $tablet-width - 1px) {
-      color: $color-light-s;
-    }
-  }
-
   .nav-menu__item:hover {
     color: $color-dark-3xl;
     @extend %transition;
-    @media screen and (max-width: $tablet-width - 1px) {
-      color: $color-light-s;
-    }
   }
 
   .burger {
@@ -53,18 +42,7 @@
       background-color: $color-dark;
 
     }
-
-    &.burger_open {
-      span,
-      &:before,
-      &:after {
-        background-color: $color-primary;
-        @extend %transition;
-      }
-    }
   }
-
-
 }
 
 .main.our-pets {

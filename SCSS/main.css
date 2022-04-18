@@ -1,4 +1,4 @@
-.header.our-pets .burger.burger_open span, .header.our-pets .burger.burger_open:before, .header.our-pets .burger.burger_open:after, .header.our-pets .nav-menu__item:hover, .donation .credit-card:hover, .pets-cards .pets-card:hover .button, .header .nav-menu__item_active, .header .nav-menu__item:hover, .switch:hover, .button:hover {
+.header.our-pets .nav-menu__item:hover, .donation .credit-card:hover, .pets-cards .pets-card:hover .button, .header .nav-menu__item_active, .header .nav-menu__item:hover, .switch:hover, .button:hover {
   transition: all 0.3s ease-in-out;
 }
 
@@ -213,7 +213,7 @@ html {
 .page.page-shadow:before {
   content: "";
   display: block;
-  width: 100vw;
+  width: 100%;
   height: inherit;
   position: absolute;
   top: 0;
@@ -1192,11 +1192,6 @@ body {
     padding: 30px;
   }
 }
-@media screen and (max-width: 767px) {
-  .header.our-pets {
-    color: #CDCDCD;
-  }
-}
 @media screen and (max-width: 320px) {
   .header.our-pets {
     padding: 30px 53px 30px 10px;
@@ -1205,28 +1200,18 @@ body {
 .header.our-pets .logo__title {
   color: #545454;
 }
+.header.our-pets .nav-menu {
+  background-color: #FFFFFF;
+}
 .header.our-pets .logo__subtitle,
 .header.our-pets .nav-menu__item_active {
   color: #292929;
 }
-@media screen and (max-width: 767px) {
-  .header.our-pets .nav-menu__item_active {
-    color: #FAFAFA;
-  }
-}
 .header.our-pets .nav-menu__item:hover {
   color: #292929;
 }
-@media screen and (max-width: 767px) {
-  .header.our-pets .nav-menu__item:hover {
-    color: #FAFAFA;
-  }
-}
 .header.our-pets .burger span, .header.our-pets .burger:before, .header.our-pets .burger:after {
   background-color: #000000;
-}
-.header.our-pets .burger.burger_open span, .header.our-pets .burger.burger_open:before, .header.our-pets .burger.burger_open:after {
-  background-color: #F1CDB3;
 }
 
 .main.our-pets {
