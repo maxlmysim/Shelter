@@ -121,6 +121,7 @@
     justify-content: space-between;
     margin-bottom: 60px;
     width: 100%;
+    min-width: 270px;
 
     @media screen and (max-width: $content-width - 1px) {
       .pets-card:nth-last-child(2) {
@@ -143,9 +144,6 @@
     @media screen and (max-width: $tablet-width - 1px) {
       justify-content: center;
       flex-direction: column;
-    }
-
-    @media screen and (max-width: $tablet-width - 1px) {
       .pets-card:nth-last-child(3),
       .pets-card:nth-last-child(4),
       .pets-card:nth-last-child(5) {
