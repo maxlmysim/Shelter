@@ -15,7 +15,7 @@
   &__container {
     @include flex(space-between);
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: $content-width - 1px) {
       flex-direction: column;
       gap: 100px;
       align-items: center;
@@ -32,7 +32,7 @@
       .heading {
         color: $color-light-xl;
         letter-spacing: 0;
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: $content-width - 1px) {
           margin-left: -153px;
         }
 
@@ -54,7 +54,7 @@
         }
       }
 
-      @media screen and (max-width: 1000px) {
+      @media screen and (max-width: $content-width - 1px) {
         margin: 0;
         @include flex('', center);
         flex-direction: column;
