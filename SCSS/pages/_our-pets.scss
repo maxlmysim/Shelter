@@ -126,15 +126,23 @@
       .pets-card:nth-last-child(2) {
         display: none
       }
+      justify-content: space-evenly;
+      column-gap: 200px;
+    }
+
+    @media screen and (max-width: 900px) {
+      column-gap: 0;
     }
 
     @media screen and (max-width: $tablet-width) {
       width: 82%;
       margin: 0 auto 40px;
+      justify-content: space-between;
     }
 
-    @media screen and (max-width: $tablet-width - 10px) {
+    @media screen and (max-width: $tablet-width - 1px) {
       justify-content: center;
+      flex-direction: column;
     }
 
     @media screen and (max-width: $tablet-width - 1px) {
