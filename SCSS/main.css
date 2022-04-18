@@ -215,7 +215,7 @@ html {
   display: block;
   width: 100%;
   height: inherit;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
@@ -332,19 +332,6 @@ body {
     width: calc(100% - 63px);
   }
 }
-.header .logo {
-  z-index: 10;
-}
-@media screen and (max-width: 767px) {
-  .header .logo {
-    margin-left: 55px;
-  }
-}
-@media screen and (max-width: 360px) {
-  .header .logo {
-    margin-left: 0;
-  }
-}
 .header .burger {
   display: none;
 }
@@ -412,6 +399,16 @@ body {
   }
   .header .nav-menu_open {
     right: 0;
+  }
+}
+.header .nav-menu .logo {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .header .nav-menu .logo {
+    display: block;
+    margin-top: 30px;
+    margin-left: 10px;
   }
 }
 .header .nav-menu__list {
@@ -1192,6 +1189,11 @@ body {
     padding: 30px;
   }
 }
+@media screen and (max-width: 767px) {
+  .header.our-pets {
+    color: #CDCDCD;
+  }
+}
 @media screen and (max-width: 320px) {
   .header.our-pets {
     padding: 30px 53px 30px 10px;
@@ -1200,18 +1202,37 @@ body {
 .header.our-pets .logo__title {
   color: #545454;
 }
-.header.our-pets .nav-menu {
-  background-color: #FFFFFF;
+.header.our-pets .nav-menu .logo__title {
+  color: #F1CDB3;
+}
+.header.our-pets .nav-menu .logo__subtitle {
+  color: #FFFFFF;
 }
 .header.our-pets .logo__subtitle,
 .header.our-pets .nav-menu__item_active {
   color: #292929;
 }
+.header.our-pets .nav-menu__item_active {
+  color: #292929;
+}
+@media screen and (max-width: 767px) {
+  .header.our-pets .nav-menu__item_active {
+    color: #FAFAFA;
+  }
+}
 .header.our-pets .nav-menu__item:hover {
   color: #292929;
 }
+@media screen and (max-width: 767px) {
+  .header.our-pets .nav-menu__item:hover {
+    color: #FAFAFA;
+  }
+}
 .header.our-pets .burger span, .header.our-pets .burger:before, .header.our-pets .burger:after {
   background-color: #000000;
+}
+.header.our-pets .burger_open span, .header.our-pets .burger_open:before, .header.our-pets .burger_open:after {
+  background-color: #F1CDB3;
 }
 
 .main.our-pets {
