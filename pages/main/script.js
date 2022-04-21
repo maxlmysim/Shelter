@@ -25,7 +25,7 @@ burger.addEventListener('click', function () {
     });
 });
 
-function createPetCard(obj) {
+function createPetCard(obj, id) {
     let petsCard = document.createElement('div'),
         modalWindow = document.createElement('div'),
         petImg = document.createElement('img'),
@@ -69,16 +69,25 @@ function createPetCard(obj) {
     name2.textContent = obj.name;
 
     modalWindow.append(name2, breed, description, list);
-    modalWindow.className = 'modal-window';
+    modalWindow.className = 'pets-card__modal-window';
     modalWindow.style.display = 'none';
 
     petsCard.append(modalWindow);
+    petsCard.dataset.id = id;
 
     return petsCard;
 }
 
-function randomCard(checkList = listRandomCard) {
+function randomCard(start) {
+    let checkList = [];
     let newList = [];
+
+    if (!start) {
+        for (let i = 0; i < 3; i++) {
+            checkList.push(+itemActive.children[i].dataset.id);
+        }
+    }
+
     while (newList.length < 3) {
         let number = Math.floor(Math.random() * listPets.length);
 
@@ -98,49 +107,48 @@ let slider = document.querySelector('.slider'),
     itemActive = slider.querySelector('#item-active'),
     carousel = slider.querySelector('#carousel'),
     moveLeft = () => {
-        carousel.classList.add('transition-left')
-        arrowLeft.removeEventListener('click', moveLeft)
-        arrowRight.removeEventListener('click', moveRight)
+        carousel.classList.add('transition-left');
+        arrowLeft.removeEventListener('click', moveLeft);
+        arrowRight.removeEventListener('click', moveRight);
     },
     moveRight = () => {
-        carousel.classList.add('transition-right')
-        arrowRight.removeEventListener('click', moveRight)
-        arrowLeft.removeEventListener('click', moveLeft)
-    },
-    listRandomCard = [];
+        carousel.classList.add('transition-right');
+        arrowRight.removeEventListener('click', moveRight);
+        arrowLeft.removeEventListener('click', moveLeft);
+    };
 
-function createPetsCard() {
-    let listActive = []
-    listActive = randomCard();
-    listActive.forEach(pet => {
-        itemActive.append(createPetCard(listPets[pet]));
+function createListCard(item, boolean) {
+    randomCard(boolean).forEach(pet => {
+        item.append(createPetCard(listPets[pet], pet));
     });
+};
 
-    listRandomCard = randomCard(listActive);
-    listRandomCard.forEach(pet => {
-        itemLeft.append(createPetCard(listPets[pet]));
-    });
+(function () {
+    createListCard(itemActive, true);
+    createListCard(itemLeft);
+    createListCard(itemRight);
+})();
 
-    listRandomCard = randomCard(listActive);
-    listRandomCard.forEach(pet => {
-        itemRight.append(createPetCard(listPets[pet]));
-    });
-}
-
-createPetsCard();
-
-arrowLeft.addEventListener('click', moveLeft)
-arrowRight.addEventListener('click', moveRight)
+arrowLeft.addEventListener('click', moveLeft);
+arrowRight.addEventListener('click', moveRight);
 
 carousel.addEventListener('animationend', function (animationEvent) {
     if (animationEvent.animationName === 'move-left') {
-        arrowLeft.addEventListener('click', moveLeft)
-        arrowRight.addEventListener('click', moveRight)
-        carousel.classList.remove('transition-left')
+        itemRight.innerHTML = itemActive.innerHTML;
+        itemActive.innerHTML = itemLeft.innerHTML;
+        itemLeft.innerHTML = '';
+        createListCard(itemLeft);
+        arrowLeft.addEventListener('click', moveLeft);
+        arrowRight.addEventListener('click', moveRight);
+        carousel.classList.remove('transition-left');
     } else {
-        arrowLeft.addEventListener('click', moveLeft)
-        arrowRight.addEventListener('click', moveRight)
-        carousel.classList.remove('transition-right')
+        itemLeft.innerHTML = itemActive.innerHTML;
+        itemActive.innerHTML = itemRight.innerHTML;
+        itemRight.innerHTML = '';
+        createListCard(itemRight);
+        arrowLeft.addEventListener('click', moveLeft);
+        arrowRight.addEventListener('click', moveRight);
+        carousel.classList.remove('transition-right');
     }
-})
+});
 
