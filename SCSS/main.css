@@ -687,6 +687,8 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 90px;
+  position: relative;
+  left: -1080px;
 }
 @media screen and (max-width: 1279.5px) {
   .pets-cards {
@@ -703,6 +705,12 @@ body {
   .pets-cards {
     justify-content: center;
   }
+}
+.pets-cards .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 90px;
 }
 .pets-cards .pets-card {
   width: 270px;
@@ -738,6 +746,32 @@ body {
 }
 .pets-cards .pets-card .button_transparent {
   margin-bottom: 30px;
+}
+
+@keyframes move-right {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: -2160px;
+  }
+}
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 3s;
+}
+
+@keyframes move-left {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: 0;
+  }
+}
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 3s;
 }
 
 .help .content {

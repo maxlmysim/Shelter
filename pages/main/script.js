@@ -77,45 +77,70 @@ function createPetCard(obj) {
     return petsCard;
 }
 
+function randomCard(checkList = listRandomCard) {
+    let newList = [];
+    while (newList.length < 3) {
+        let number = Math.floor(Math.random() * listPets.length);
+
+        if (!checkList.includes(number) && !newList.includes(number)) {
+            newList.push(number);
+        }
+    }
+    return newList;
+}
 
 let slider = document.querySelector('.slider'),
     petsCards = slider.querySelector('.pets-cards'),
     arrowLeft = slider.querySelector('.arrow-left'),
     arrowRight = slider.querySelector('.arrow-right'),
+    itemLeft = slider.querySelector('#item-left'),
+    itemRight = slider.querySelector('#item-right'),
+    itemActive = slider.querySelector('#item-active'),
+    carousel = slider.querySelector('#carousel'),
+    moveLeft = () => {
+        carousel.classList.add('transition-left')
+        arrowLeft.removeEventListener('click', moveLeft)
+        arrowRight.removeEventListener('click', moveRight)
+    },
+    moveRight = () => {
+        carousel.classList.add('transition-right')
+        arrowRight.removeEventListener('click', moveRight)
+        arrowLeft.removeEventListener('click', moveLeft)
+    },
     listRandomCard = [];
 
-
-function randomCard() {
-    let newList = [];
-
-    while (newList.length < 3) {
-        let number = Math.floor(Math.random() * listPets.length);
-
-        if (!listRandomCard.includes(number) && !newList.includes(number)) {
-            newList.push(number);
-        }
-    }
-
-    listRandomCard.length = 0;
-    listRandomCard = newList
-}
-randomCard();
-
 function createPetsCard() {
+    let listActive = []
+    listActive = randomCard();
+    listActive.forEach(pet => {
+        itemActive.append(createPetCard(listPets[pet]));
+    });
+
+    listRandomCard = randomCard(listActive);
     listRandomCard.forEach(pet => {
-        petsCards.append(createPetCard(listPets[pet]));
-    })
+        itemLeft.append(createPetCard(listPets[pet]));
+    });
+
+    listRandomCard = randomCard(listActive);
+    listRandomCard.forEach(pet => {
+        itemRight.append(createPetCard(listPets[pet]));
+    });
 }
-createPetsCard()
 
-slider.addEventListener('click', function () {
-    let target = event.target;
+createPetsCard();
 
-    if (target.classList.contains('arrow-left') ||
-        target.classList.contains('arrow-right')) {
-        randomCard();
-        petsCards.innerHTML = ''
-        createPetsCard()
+arrowLeft.addEventListener('click', moveLeft)
+arrowRight.addEventListener('click', moveRight)
+
+carousel.addEventListener('animationend', function (animationEvent) {
+    if (animationEvent.animationName === 'move-left') {
+        arrowLeft.addEventListener('click', moveLeft)
+        arrowRight.addEventListener('click', moveRight)
+        carousel.classList.remove('transition-left')
+    } else {
+        arrowLeft.addEventListener('click', moveLeft)
+        arrowRight.addEventListener('click', moveRight)
+        carousel.classList.remove('transition-right')
     }
-});
+})
 

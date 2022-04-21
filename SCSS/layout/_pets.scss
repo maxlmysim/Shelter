@@ -64,7 +64,8 @@
 
 .pets-cards {
   @include flex(space-between, center, 90px);
-
+  position: relative;
+  left: -1080px;
 
   @media screen and (max-width: $content-width - 0.5px) {
     gap: 39px;
@@ -79,6 +80,9 @@
     justify-content: center;
   }
 
+  .item {
+    @include flex(space-between, center, 90px);
+  }
 
   .pets-card {
     width: 270px;
@@ -134,5 +138,22 @@
 }
 
 
-.arrow-right {
+@keyframes move-right {
+  from {left: -1080px;}
+  to {left: -2160px;}
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: $animation-duration;
+}
+
+@keyframes move-left {
+  from {left: -1080px;}
+  to {left: 0;}
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: $animation-duration;
 }
