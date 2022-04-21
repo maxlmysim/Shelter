@@ -12,7 +12,7 @@
     grid-template-columns: 300px 320px 300px;
     grid-template-areas: "contacts location puppy";
 
-    @media screen and (max-width: $content-width - 1px) {
+    @media screen and (max-width: $content-width - 0.5px) {
       grid-template-rows: 234px 1fr;
       grid-template-columns: 1fr 1fr;
       grid-template-areas: "contacts location"
@@ -28,7 +28,7 @@
       column-gap: 40px;
     }
 
-    @media screen and (max-width: $tablet-width - 1px) {
+    @media screen and (max-width: $tablet-width - 0.5px) {
       grid-template-rows: 208px 222px 1fr;
       grid-template-columns: 1fr;
       grid-template-areas:
@@ -55,7 +55,7 @@
       gap: 42px;
     }
 
-    @media screen and (max-width: $tablet-width - 1px) {
+    @media screen and (max-width: $tablet-width - 0.5px) {
       align-items: center;
     }
   }
@@ -75,7 +75,7 @@
       gap: 32px;
     }
 
-    @media screen and (max-width: $tablet-width - 1px) {
+    @media screen and (max-width: $tablet-width - 0.5px) {
       align-items: normal;
     }
 

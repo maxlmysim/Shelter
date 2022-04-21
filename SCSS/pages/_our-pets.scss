@@ -12,7 +12,7 @@
     padding: 30px;
   }
 
-  @media screen and (max-width: $tablet-width - 1px) {
+  @media screen and (max-width: $tablet-width - 0.5px) {
     color: $color-dark-s;
   }
 
@@ -42,7 +42,7 @@
   .nav-menu__item_active {
     color: $color-dark-3xl;
 
-    @media screen and (max-width: $tablet-width - 1px) {
+    @media screen and (max-width: $tablet-width - 0.5px) {
       color: $color-light-s;
     }
   }
@@ -50,7 +50,7 @@
   .nav-menu__item:hover {
     color: $color-dark-3xl;
     @extend %transition;
-    @media screen and (max-width: $tablet-width - 1px) {
+    @media screen and (max-width: $tablet-width - 0.5px) {
       color: $color-light-s;
     }
   }
@@ -123,7 +123,7 @@
     width: 100%;
     min-width: 270px;
 
-    @media screen and (max-width: $content-width - 1px) {
+    @media screen and (max-width: $content-width - 0.5px) {
       .pets-card:nth-last-child(2) {
         display: none
       }
@@ -141,7 +141,7 @@
       justify-content: space-between;
     }
 
-    @media screen and (max-width: $tablet-width - 1px) {
+    @media screen and (max-width: $tablet-width - 0.5px) {
       justify-content: center;
       flex-direction: column;
       .pets-card:nth-last-child(3),

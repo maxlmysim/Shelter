@@ -14,7 +14,7 @@
   .container {
     @include flex(center, '', 120px);
 
-    @media screen and (max-width: 980px) {
+    @media screen and (max-width: $content-width - 0.5px) {
       flex-direction: column-reverse;
       align-items: center;
       gap: 55px;
@@ -44,7 +44,7 @@
       padding: 0;
     }
 
-    @media screen and (max-width: $tablet-width - 1px) {
+    @media screen and (max-width: $tablet-width - 0.5px) {
       .paragraph-l {
         text-align: justify;
       }

@@ -1,4 +1,4 @@
-import pets from '../../script/our-pets.js';
+import listPets from '../../script/our-pets.js';
 
 const burger = document.querySelector('.burger');
 const page = document.querySelector('.page');
@@ -81,36 +81,41 @@ function createPetCard(obj) {
 let slider = document.querySelector('.slider'),
     petsCards = slider.querySelector('.pets-cards'),
     arrowLeft = slider.querySelector('.arrow-left'),
-    arrowRight = slider.querySelector('.arrow-right');
-
-pets.forEach(pet => {
-    petsCards.append(createPetCard(pet));
-});
+    arrowRight = slider.querySelector('.arrow-right'),
+    listRandomCard = [];
 
 
-let slides = petsCards.querySelectorAll('.pets-card'),
-    slideWidth = slides[0].offsetWidth,
-    slideIndex = 0,
-    transition = true,
-    slide = function () {
-        if (transition) {
-            petsCards.style.transition = 'transform .5s';
+function randomCard() {
+    let newList = [];
+
+    while (newList.length < 3) {
+        let number = Math.floor(Math.random() * listPets.length);
+
+        if (!listRandomCard.includes(number) && !newList.includes(number)) {
+            newList.push(number);
         }
-        petsCards.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
-    };
+    }
 
+    listRandomCard.length = 0;
+    listRandomCard = newList
+}
+randomCard();
+
+function createPetsCard() {
+    listRandomCard.forEach(pet => {
+        petsCards.append(createPetCard(listPets[pet]));
+    })
+}
+createPetsCard()
 
 slider.addEventListener('click', function () {
     let target = event.target;
 
-    if (target.classList.contains('arrow-left')) {
-        slideIndex--;
-    } else if (target.classList.contains('arrow-right')) {
-        slideIndex++;
-    } else {
-        return;
+    if (target.classList.contains('arrow-left') ||
+        target.classList.contains('arrow-right')) {
+        randomCard();
+        petsCards.innerHTML = ''
+        createPetsCard()
     }
-
-    slide();
 });
 
