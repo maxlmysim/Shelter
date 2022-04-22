@@ -268,6 +268,14 @@ body {
   padding-left: 4px;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
 .button {
   padding: 16px 45px;
   height: 52px;
@@ -694,11 +702,7 @@ body {
   .pets-cards {
     gap: 39px;
     justify-content: space-evenly;
-  }
-}
-@media screen and (max-width: 768px) {
-  .pets-cards {
-    justify-content: space-between;
+    left: 0;
   }
 }
 @media screen and (max-width: 767.5px) {
@@ -708,9 +712,16 @@ body {
 }
 .pets-cards .item {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 90px;
+  cursor: pointer;
+  min-width: 990px;
+}
+@media screen and (max-width: 1279.5px) {
+  .pets-cards .item {
+    gap: 39px;
+  }
 }
 .pets-cards .pets-card {
   width: 270px;
@@ -748,7 +759,89 @@ body {
   margin-bottom: 30px;
 }
 
-@keyframes move-right {
+.modal-window {
+  position: fixed;
+  width: 900px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  border-radius: 9px;
+  z-index: 5;
+}
+.modal-window__wrapper {
+  display: flex;
+  border-radius: 9px;
+  gap: 29px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #000000;
+  background: #FAFAFA;
+}
+.modal-window__content {
+  margin-right: 20px;
+}
+.modal-window .btn-close-window {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  right: -45px;
+  top: -50px;
+}
+.modal-window .btn-close-window:before, .modal-window .btn-close-window:after {
+  position: absolute;
+  content: "";
+  background: #292929;
+  width: 12px;
+  height: 1px;
+  left: 18px;
+  top: 24px;
+}
+.modal-window .btn-close-window:before {
+  transform: rotate(45deg);
+}
+.modal-window .btn-close-window:after {
+  transform: rotate(-45deg);
+}
+.modal-window .pets-card__photo {
+  width: 500px;
+  height: 500px;
+  border-radius: 9px 0px 0px 9px;
+}
+.modal-window .pets-card__name {
+  color: #000000;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.modal-window .pets-card__breed {
+  margin-bottom: 40px;
+}
+.modal-window .pets-card__description {
+  margin-bottom: 40px;
+}
+.modal-window .h5-modal-window {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 15px;
+}
+.modal-window .h5-modal-window:before {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #F1CDB3;
+}
+.modal-window .h5-modal-window:last-child {
+  margin-bottom: 0;
+}
+@keyframes move-right-3card {
   from {
     left: -1080px;
   }
@@ -756,12 +849,23 @@ body {
     left: -2160px;
   }
 }
-.transition-right {
-  animation-name: move-right;
-  animation-duration: 3s;
+@keyframes move-right-2card {
+  from {
+    left: 0;
+  }
+  to {
+    left: -1030px;
+  }
 }
-
-@keyframes move-left {
+@keyframes move-right-1card {
+  from {
+    left: 0;
+  }
+  to {
+    left: -1030px;
+  }
+}
+@keyframes move-left-3card {
   from {
     left: -1080px;
   }
@@ -769,9 +873,58 @@ body {
     left: 0;
   }
 }
-.transition-left {
-  animation-name: move-left;
-  animation-duration: 3s;
+@keyframes move-left-2card {
+  from {
+    left: 0;
+  }
+  to {
+    left: 1030px;
+  }
+}
+@keyframes move-left-1card {
+  from {
+    left: 0;
+  }
+  to {
+    left: 1030px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .transition-right {
+    animation-name: move-right-3card;
+    animation-duration: 1s;
+  }
+}
+@media screen and (max-width: 1279.5px) {
+  .transition-right {
+    animation-name: move-right-2card;
+    animation-duration: 1s;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .transition-right {
+    animation-name: move-right-1card;
+    animation-duration: 1s;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .transition-left {
+    animation-name: move-left-3card;
+    animation-duration: 1s;
+  }
+}
+@media screen and (max-width: 1279.5px) {
+  .transition-left {
+    animation-name: move-left-2card;
+    animation-duration: 1s;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  .transition-left {
+    animation-name: move-left-1card;
+    animation-duration: 1s;
+  }
 }
 
 .help .content {

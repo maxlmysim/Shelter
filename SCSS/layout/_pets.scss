@@ -69,11 +69,8 @@
 
   @media screen and (max-width: $content-width - 0.5px) {
     gap: 39px;
-    justify-content: space-evenly
-  }
-
-  @media screen and (max-width: $tablet-width) {
-    justify-content: space-between;
+    justify-content: space-evenly;
+    left: 0;
   }
 
   @media screen and (max-width: $tablet-width - 0.5px) {
@@ -81,7 +78,12 @@
   }
 
   .item {
-    @include flex(space-between, center, 90px);
+    @include flex(center, center, 90px);
+    cursor: pointer;
+    min-width: 990px;
+    @media screen and (max-width: $content-width - 0.5px) {
+      gap: 39px;
+    }
   }
 
   .pets-card {
@@ -137,23 +139,193 @@
   }
 }
 
+.modal-window {
+  position: fixed;
+  width: 900px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  border-radius: 9px;
+  z-index: 5;
 
-@keyframes move-right {
-  from {left: -1080px;}
-  to {left: -2160px;}
+  &__wrapper {
+    display: flex;
+    border-radius: 9px;
+    gap: 29px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: $color-dark;
+    background: $color-light-s;
+  }
+
+  &__content {
+    margin-right: 20px;
+  }
+
+  .btn-close-window {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    border: 2px solid $color-primary;
+    border-radius: 100px;
+    right: -45px;
+    top: -50px;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      background: $color-dark-3xl;
+      width: 12px;
+      height: 1px;
+      left: 18px;
+      top: 24px;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .pets-card__photo {
+    width: 500px;
+    height: 500px;
+    border-radius: 9px 0px 0px 9px;
+  }
+
+  .pets-card__name {
+    color: $color-dark;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+
+  .pets-card__breed {
+    margin-bottom: 40px;
+  }
+
+  .pets-card__description {
+    margin-bottom: 40px;
+  }
+
+  .h5-modal-window {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 6px;
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: $color-primary;
+    }
+  }
+
+  .h5-modal-window:last-child {
+    margin-bottom: 0;
+  }
+
+  .pets-card__extra-description {
+
+  }
+}
+
+
+@keyframes move-right-3card {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: -2160px;
+  }
+}
+
+@keyframes move-right-2card {
+  from {
+    left: 0;
+  }
+  to {
+    left: -1030px;
+  }
+}
+
+@keyframes move-right-1card {
+  from {
+    left: 0;
+  }
+  to {
+    left: -1030px;
+  }
+}
+
+
+@keyframes move-left-3card {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes move-left-2card {
+  from {
+    left: 0;
+  }
+  to {
+    left: 1030px;
+  }
+}
+
+@keyframes move-left-1card {
+  from {
+    left: 0;
+  }
+  to {
+    left: 1030px;
+  }
 }
 
 .transition-right {
-  animation-name: move-right;
-  animation-duration: $animation-duration;
-}
+  @media screen and (min-width: $content-width) {
+    animation-name: move-right-3card;
+    animation-duration: $animation-duration;
+  }
+  @media screen and (max-width: $content-width - 0.5px) {
+    animation-name: move-right-2card;
+    animation-duration: $animation-duration;
+  }
 
-@keyframes move-left {
-  from {left: -1080px;}
-  to {left: 0;}
+  @media screen and (max-width: $tablet-width - 0.5px) {
+    animation-name: move-right-1card;
+    animation-duration: $animation-duration;
+  }
 }
 
 .transition-left {
-  animation-name: move-left;
-  animation-duration: $animation-duration;
+  @media screen and (min-width: $content-width) {
+    animation-name: move-left-3card;
+    animation-duration: $animation-duration;
+  }
+  @media screen and (max-width: $content-width - 0.5px) {
+    animation-name: move-left-2card;
+    animation-duration: $animation-duration;
+  }
+
+  @media screen and (max-width: $tablet-width - 0.5px) {
+    animation-name: move-left-1card;
+    animation-duration: $animation-duration;
+  }
 }
+
+
