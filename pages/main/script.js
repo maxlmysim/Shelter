@@ -1,30 +1,29 @@
 import listPets from '../../script/our-pets.js';
 
 const burger = document.querySelector('.burger');
-const page = document.querySelector('.page');
-page.style.height = document.documentElement.clientHeight + 'px';
+const shadow = document.querySelector('.shadow');
 
 burger.addEventListener('click', function () {
     document.querySelector("body").classList.toggle('no-scroll');
     burger.classList.toggle('burger_open');
     document.querySelector('.nav-menu').classList.toggle('nav-menu_open');
-    page.classList.toggle('page-shadow');
+    shadow.classList.toggle('hidden');
     let navigation = document.querySelector('.nav-menu');
     navigation.addEventListener('click', function (event) {
         if (event.target.classList.contains('paragraph-mobile-menu')) {
             burger.classList.remove('burger_open');
             document.querySelector('.nav-menu').classList.remove('nav-menu_open');
-            page.classList.remove('page-shadow');
+            shadow.classList.add('hidden');
             document.querySelector("body").classList.remove('no-scroll');
 
         }
     });
-    page.addEventListener('click', function (event) {
-        if (event.target.classList.contains('page-shadow')) {
+    shadow.addEventListener('click', function (event) {
+        if (event.target.classList.contains('shadow')) {
             document.querySelector("body").classList.remove('no-scroll');
             burger.classList.remove('burger_open');
             document.querySelector('.nav-menu').classList.remove('nav-menu_open');
-            page.classList.remove('page-shadow');
+            shadow.classList.add('hidden');
         }
     });
 });
@@ -65,31 +64,31 @@ function createPetCard(obj, id) {
     age.className = 'h5-modal-window';
     let [...inoculationsList] = obj.inoculations;
     inoculations.innerHTML = `<b>Inoculations:</b> ${inoculationsList.join(', ')}`;
-    inoculations.className = 'h5-modal-window'
+    inoculations.className = 'h5-modal-window';
     let [...diseasesList] = obj.diseases;
     diseases.innerHTML = `<b>Diseases:</b> ${diseasesList.join(', ')}`;
-    diseases.className = 'h5-modal-window'
+    diseases.className = 'h5-modal-window';
     let [...parasitesList] = obj.parasites;
     parasites.innerHTML = `<b>Parasites:</b> ${parasitesList.join(', ')}`;
-    parasites.className = 'h5-modal-window'
+    parasites.className = 'h5-modal-window';
 
     list.append(age, inoculations, diseases, parasites);
-    list.className = 'pets-card__extra-description'
+    list.className = 'pets-card__extra-description';
 
     name2.className = 'pets-card__name';
     name2.textContent = obj.name;
 
     let wrapper = document.createElement('div');
     let modalContent = document.createElement('div');
-    modalContent.className = 'modal-window__content'
+    modalContent.className = 'modal-window__content';
     wrapper.className = 'modal-window__wrapper';
     petImg2.className = 'pets-card__photo';
     petImg2.src = obj.img;
     petImg2.alt = obj.name;
-    modalContent.append(name2, breed, description, list)
-    wrapper.append(petImg2, modalContent)
-    buttonCloseModal.className = 'btn-close-window'
-    modalWindow.append(wrapper, buttonCloseModal);
+    modalContent.append(name2, breed, description, list);
+    wrapper.append(petImg2, modalContent,buttonCloseModal);
+    buttonCloseModal.className = 'btn-close-window';
+    modalWindow.append(wrapper);
     modalWindow.className = 'modal-window';
     modalWindow.classList.add('hidden');
 
@@ -175,26 +174,49 @@ carousel.addEventListener('animationend', function (animationEvent) {
     }
 });
 
-carousel.addEventListener('click', function (event) {
-    let card = event.target.closest('.pets-card');
-    let btnClose = card.querySelector('.btn-close-window')
-    if (card) {
-        card.children[3].classList.remove('hidden');
-        page.classList.add('page-shadow');
-        document.querySelector("body").classList.add('no-scroll');
-        let close = (event) => {
-            if (event.target.classList.contains('page-shadow') ||
-                event.target.classList.contains('btn-close-window')) {
-                document.querySelector("body").classList.remove('no-scroll');
-                page.classList.remove('page-shadow');
-                card.children[3].classList.add('hidden');
-                page.removeEventListener('click', close)
-                btnClose.removeEventListener('click', close)
-            }
-        }
-        page.addEventListener('click', close);
-        btnClose.addEventListener('click', close);
+let closeModalWindow = (event) => {
+    let card = document.querySelector('.pets-card_active');
+    let btnClose = card.querySelector('.btn-close-window');
+    console.log(card.children[3]);
+    if (event.target.classList.contains('shadow') ||
+        event.target.classList.contains('btn-close-window')) {
+        card.classList.remove('pets-card_active');
+        document.querySelector("body").classList.remove('no-scroll');
+        shadow.classList.add('hidden');
+        card.children[3].classList.add('hidden');
+        shadow.removeEventListener('click', closeModalWindow);
+        btnClose.removeEventListener('click', closeModalWindow);
+        setTimeout(function () {
+            carousel.addEventListener('click', openModalWindow);
+        }, 0);
     }
+};
+
+let openModalWindow = (event) => {
+    let card = event.target.closest('.pets-card');
+    let btnClose = card.querySelector('.btn-close-window');
+    if (card) {
+        card.classList.add('pets-card_active');
+        card.children[3].classList.remove('hidden');
+        shadow.classList.remove('hidden');
+        document.querySelector("body").classList.add('no-scroll');
+        carousel.removeEventListener('click', openModalWindow);
+        shadow.addEventListener('click', closeModalWindow);
+        btnClose.addEventListener('click', closeModalWindow);
+        btnClose.classList.remove('hover');
+    }
+};
+
+carousel.addEventListener('click', openModalWindow);
+shadow.addEventListener('mouseover', function (event) {
+    let cardActive = document.querySelector('.pets-card_active');
+    let btnClose = cardActive.querySelector('.btn-close-window');
+    btnClose.classList.add('hover');
+});
+shadow.addEventListener('mouseleave', function (event) {
+    let cardActive = document.querySelector('.pets-card_active');
+    let btnClose = cardActive.querySelector('.btn-close-window');
+    btnClose.classList.remove('hover');
 });
 
 
