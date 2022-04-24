@@ -178,7 +178,6 @@ carousel.addEventListener('animationend', function (animationEvent) {
 let closeModalWindow = (event) => {
     let card = document.querySelector('.pets-card_active');
     let btnClose = card.querySelector('.btn-close-window');
-    console.log(card.children[3]);
     if (event.target.classList.contains('shadow') ||
         event.target.classList.contains('btn-close-window')) {
         card.classList.remove('pets-card_active');
@@ -211,11 +210,17 @@ let openModalWindow = (event) => {
 carousel.addEventListener('click', openModalWindow);
 shadow.addEventListener('mouseover', function (event) {
     let cardActive = document.querySelector('.pets-card_active');
+    if (!cardActive) {
+        return
+    }
     let btnClose = cardActive.querySelector('.btn-close-window');
     btnClose.classList.add('hover');
 });
 shadow.addEventListener('mouseleave', function (event) {
     let cardActive = document.querySelector('.pets-card_active');
+    if (!cardActive) {
+        return
+    }
     let btnClose = cardActive.querySelector('.btn-close-window');
     btnClose.classList.remove('hover');
 });
