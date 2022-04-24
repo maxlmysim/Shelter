@@ -26,8 +26,9 @@
 
   .nav-menu {
     @media screen and (max-width: $tablet-width - 0.5px) {
-      display:none;
+      display: none;
     }
+
     .logo__title {
       color: $color-primary;
     }
@@ -44,18 +45,11 @@
 
   .nav-menu__item_active {
     color: $color-dark-3xl;
-
-    @media screen and (max-width: $tablet-width - 0.5px) {
-      color: $color-light-s;
-    }
   }
 
   .nav-menu__item:hover {
     color: $color-dark-3xl;
     @extend %transition;
-    @media screen and (max-width: $tablet-width - 0.5px) {
-      color: $color-light-s;
-    }
   }
 
   .burger {
@@ -79,20 +73,125 @@
   display: none;
   @media screen and (max-width: $tablet-width - 0.5px) {
     position: fixed;
-    display:block;
+    display: block;
     top: 0;
     z-index: 3;
     right: -100%;
     max-width: 320px;
     width: 100%;
     height: 100%;
-    background: $color-dark-3xl;
+    background: $color-light-xl;
     transition: all 0.5s ease-in-out;
+  }
 
-    &_open {
-      right: 0;
+  .logo {
+    &__title {
+      color: $color-dark-l;
+    }
+
+    &__subtitle {
+      color: $color-dark-3xl;
+    }
+
+    display: none;
+    @media screen and (max-width: $tablet-width - 0.5px) {
+      display: block;
+      margin-top: 30px;
+      margin-left: 10px;
     }
   }
+
+  .nav-menu {
+    &__list {
+      @include flex('', '', 35px);
+      margin: 0 2px 0 0;
+
+      @media screen and (max-width: $tablet-width) {
+        margin: -1px 2px 0 0;
+      }
+
+      @media screen and (max-width: $tablet-width - 0.5px) {
+        padding-top: 158px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+    }
+
+    &__item {
+      color: $color-dark-l;
+    }
+
+    &__item_active, &__item:hover {
+      color: $color-dark-3xl;
+      @extend %transition;
+    }
+
+    &__item_active {
+      border-bottom: 3px solid $color-primary;
+    }
+  }
+
+}
+.our-pets {
+  @media screen and (max-width: $tablet-width - 0.5px) {
+    .burger {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 50px;
+      width: 30px;
+      height: 22px;
+      z-index: 50;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      span,
+      &:before,
+      &:after {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $color-dark;
+        transition: all 0.3s ease-in-out;
+      }
+
+      span {
+        left: 0;
+        top: 10px;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+      }
+
+      &:before {
+        top: 0;
+      }
+
+      &:after {
+        bottom: 0;
+      }
+
+      &:hover {
+        &:before {
+          top: 2px;
+        }
+
+        &:after {
+          bottom: 2px;
+        }
+      }
+
+      &_open {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+.nav-menu_open {
+  right: 0;
 }
 
 .main.our-pets {
@@ -168,7 +267,7 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 30px;
-    column-gap:  40px;
+    column-gap: 40px;
     min-width: 1200px;
     min-height: 930px;
   }
