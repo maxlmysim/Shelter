@@ -1,4 +1,5 @@
 import listPets from '../../script/our-pets.js';
+import pets from "../../script/our-pets.js";
 
 const burger = document.querySelector('.burger');
 const shadow = document.querySelector('.shadow');
