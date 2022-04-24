@@ -3,7 +3,8 @@ import listPets from '../../script/our-pets.js';
 const burger = document.querySelector('.burger');
 const shadow = document.querySelector('.shadow');
 let screenWidth = window.innerWidth;
-const petsContainer= document.querySelector('.pets-container');
+const petsContainer = document.querySelector('.pets-container');
+
 
 burger.addEventListener('click', function () {
     document.querySelector("body").classList.toggle('no-scroll');
@@ -147,30 +148,102 @@ function random(length) {
     return newList;
 }
 
-function createListPage(pageQuantity, list) {
-    let pages = document.createElement('div')
-    pages.className = 'pets-cards'
+function createListPage(pageQuantity, list, petsQuantity) {
+    let pages = document.createElement('div');
+    pages.className = 'pets-cards';
     for (let i = 1; i <= pageQuantity; i++) {
         let page = document.createElement('div');
-        page.className = 'pets-card__page'
+        page.className = 'pets-card__page';
         page.dataset.page = i;
-        let listPetsNum = list.splice(-8, 8);
+        let listPetsNum = list.splice(-petsQuantity, petsQuantity);
         listPetsNum = listPetsNum.map(num => createPetCard(listPets[num], num));
         page.append(...listPetsNum);
-        pages.append(page)
+        pages.append(page);
     }
     return pages;
 }
 
 
-let listPage = random(64);
-petsContainer.append(createListPage(8, listPage))
+let listPage = random(48);
 
 let slider = document.querySelector('.slider'),
-    petsCards = slider.querySelector('.pets-cards'),
-    carousel = slider.querySelector('#carousel')
+    carousel = slider.querySelector('#carousel'),
+    numCurrentPage = 1,
+    maxQuantityPages = 0,
+    shiftLeft = 0,
+    startSlide = slider.querySelector('#start-slide'),
+    preSlide = slider.querySelector('#pre-slide'),
+    currentPage = slider.querySelector('#current-page'),
+    nextSlide = slider.querySelector('#next-slide'),
+    lastSlide = slider.querySelector('#last-slide');
+
+
+if (screenWidth >= 1280) {
+    petsContainer.append(createListPage(6, listPage, 8));
+    maxQuantityPages = 6;
+    shiftLeft = 1200;
+} else if (screenWidth >= 768) {
+    petsContainer.append(createListPage(8, listPage, 6));
+    maxQuantityPages = 8;
+    shiftLeft = 580;
+} else {
+    petsContainer.append(createListPage(16, listPage, 3));
+    maxQuantityPages = 16;
+    shiftLeft = 270;
+}
+
+let petsCards = slider.querySelector('.pets-cards'),
+    shiftSlideLeft = () => {
+        if (numCurrentPage >= maxQuantityPages) {
+            return;
+        }
+        petsCards.style.left = `${-shiftLeft * numCurrentPage}px`;
+        numCurrentPage++;
+        if (numCurrentPage >= maxQuantityPages) {
+            nextSlide.classList.add('switch_inactive');
+            lastSlide.classList.add('switch_inactive');
+        }
+        preSlide.classList.remove('switch_inactive');
+        startSlide.classList.remove('switch_inactive');
+        currentPage.textContent = numCurrentPage;
+    },
+    shiftSlideRight = () => {
+        if (numCurrentPage <= 1) {
+            return;
+        }
+        numCurrentPage--;
+        petsCards.style.left = `${-shiftLeft * (numCurrentPage -1)}px`;
+        if (numCurrentPage <= 1) {
+            preSlide.classList.add('switch_inactive');
+            startSlide.classList.add('switch_inactive');
+        }
+        nextSlide.classList.remove('switch_inactive');
+        lastSlide.classList.remove('switch_inactive');
+        currentPage.textContent = numCurrentPage;
+    },
+    shiftSlideLast = () => {
+        numCurrentPage = maxQuantityPages;
+        petsCards.style.left = `${-shiftLeft * (numCurrentPage - 1)}px`;
+        nextSlide.classList.add('switch_inactive');
+        lastSlide.classList.add('switch_inactive');
+        preSlide.classList.remove('switch_inactive');
+        startSlide.classList.remove('switch_inactive');
+        currentPage.textContent = numCurrentPage;
+    },
+    shiftSlideStart = () => {
+        petsCards.style.left = "0px"
+        numCurrentPage = 1
+        preSlide.classList.add('switch_inactive');
+        startSlide.classList.add('switch_inactive');
+        nextSlide.classList.remove('switch_inactive');
+        lastSlide.classList.remove('switch_inactive');
+        currentPage.textContent = numCurrentPage;
+    }
 
 carousel.addEventListener('click', openModalWindow);
-
+nextSlide.addEventListener('click', shiftSlideLeft);
+preSlide.addEventListener('click', shiftSlideRight);
+lastSlide.addEventListener('click', shiftSlideLast);
+startSlide.addEventListener('click',shiftSlideStart)
 
 
