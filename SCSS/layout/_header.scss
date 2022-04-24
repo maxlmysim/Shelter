@@ -95,6 +95,7 @@
     .logo {
       display: none;
       @media screen and (max-width: $tablet-width - 0.5px) {
+        width: 190px;
         display: block;
         margin-top: 30px;
         margin-left: 10px;

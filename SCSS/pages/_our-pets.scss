@@ -85,6 +85,7 @@
   }
 
   .logo {
+    width: 190px;
     &__title {
       color: $color-dark-l;
     }
@@ -138,8 +139,8 @@
   @media screen and (max-width: $tablet-width - 0.5px) {
     .burger {
       display: block;
-      position: absolute;
-      right: 20px;
+      position: fixed;
+      right: 53px;
       top: 50px;
       width: 30px;
       height: 22px;
@@ -187,6 +188,8 @@
 
       &_open {
         transform: rotate(90deg);
+        right: 75px;
+
       }
     }
   }

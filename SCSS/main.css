@@ -435,6 +435,7 @@ body {
 }
 @media screen and (max-width: 767.5px) {
   .header .nav-menu .logo {
+    width: 190px;
     display: block;
     margin-top: 30px;
     margin-left: 10px;
@@ -802,7 +803,6 @@ body {
 @media screen and (max-width: 767.5px) {
   .modal-window {
     width: 240px;
-    height: auto;
   }
 }
 .modal-window__wrapper {
@@ -1535,6 +1535,7 @@ body {
   }
 }
 .nav-menu-tablet .logo {
+  width: 190px;
   display: none;
 }
 .nav-menu-tablet .logo__title {
@@ -1583,8 +1584,8 @@ body {
 @media screen and (max-width: 767.5px) {
   .our-pets .burger {
     display: block;
-    position: absolute;
-    right: 20px;
+    position: fixed;
+    right: 53px;
     top: 50px;
     width: 30px;
     height: 22px;
@@ -1620,6 +1621,7 @@ body {
   }
   .our-pets .burger_open {
     transform: rotate(90deg);
+    right: 75px;
   }
 }
 
