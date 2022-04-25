@@ -111,7 +111,7 @@ h3 {
   line-height: 45px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.5px) {
   .h3-mobile {
     font-size: 2.5rem;
     font-style: normal;
@@ -165,7 +165,7 @@ h5 {
   line-height: 150%;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.5px) {
   .paragraph-mobile-menu {
     font-size: 3.2rem;
     font-style: normal;
@@ -514,7 +514,7 @@ body {
     margin-left: -153px;
   }
 }
-@media screen and (max-width: 758px) {
+@media screen and (max-width: 767.5px) {
   .not-only__container .content .heading {
     margin-left: 0;
   }
@@ -1621,7 +1621,6 @@ body {
   }
   .our-pets .burger_open {
     transform: rotate(90deg);
-    right: 75px;
   }
 }
 

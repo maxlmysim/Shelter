@@ -41,7 +41,7 @@ h3 {
 }
 
 .h3-mobile {
-  @media screen and (max-width: $tablet-width - 1px) {
+  @media screen and (max-width: $tablet-width - 0.5px) {
     @include font(2.5rem, 130%);
     text-align: center;
   }
@@ -80,7 +80,7 @@ h5 {
 }
 
 .paragraph-mobile-menu {
-  @media screen and (max-width: $tablet-width - 1px) {
+  @media screen and (max-width: $tablet-width - 0.5px) {
     @include font(3.2rem, 160%);
     font-family: 'Arial', sans-serif;
   }
