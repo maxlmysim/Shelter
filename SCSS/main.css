@@ -254,12 +254,12 @@ body {
 .wrapper {
   margin: 0 40px;
 }
-@media screen and (max-width: 778px) {
+@media screen and (max-width: 1279.5px) {
   .wrapper {
     margin: 0 30px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 767.5px) {
   .wrapper {
     margin: 0 10px;
   }
