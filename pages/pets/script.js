@@ -34,7 +34,7 @@ burger.addEventListener('click', function () {
 shadow.addEventListener('mouseover', function (event) {
     let cardActive = document.querySelector('.pets-card_active');
     if (!cardActive) {
-        return
+        return;
     }
     let btnClose = cardActive.querySelector('.btn-close-window');
     btnClose.classList.add('hover');
@@ -42,7 +42,7 @@ shadow.addEventListener('mouseover', function (event) {
 shadow.addEventListener('mouseleave', function (event) {
     let cardActive = document.querySelector('.pets-card_active');
     if (!cardActive) {
-        return
+        return;
     }
     let btnClose = cardActive.querySelector('.btn-close-window');
     btnClose.classList.remove('hover');
@@ -150,16 +150,21 @@ function createPetCard(obj, id) {
     return petsCard;
 }
 
-
 function random(length) {
     let newList = [];
+    let check = []
 
     while (newList.length < length) {
-        let number = Math.floor(Math.random() * listPets.length);
-
-        if (!newList.slice(-6).includes(number)) {
-            newList.push(number);
+        let subList = [];
+        while (subList.length < 8) {
+            let number = Math.floor(Math.random() * listPets.length);
+            if (!check.slice(-6).includes(number) &&
+                !subList.includes(number)) {
+                subList.push(number);
+                check.push(number);
+            }
         }
+        newList.push(...subList);
     }
     return newList;
 }
@@ -228,7 +233,7 @@ let petsCards = slider.querySelector('.pets-cards'),
             return;
         }
         numCurrentPage--;
-        petsCards.style.left = `${-shiftLeft * (numCurrentPage -1)}px`;
+        petsCards.style.left = `${-shiftLeft * (numCurrentPage - 1)}px`;
         if (numCurrentPage <= 1) {
             preSlide.classList.add('switch_inactive');
             startSlide.classList.add('switch_inactive');
@@ -247,19 +252,19 @@ let petsCards = slider.querySelector('.pets-cards'),
         currentPage.textContent = numCurrentPage;
     },
     shiftSlideStart = () => {
-        petsCards.style.left = "0px"
-        numCurrentPage = 1
+        petsCards.style.left = "0px";
+        numCurrentPage = 1;
         preSlide.classList.add('switch_inactive');
         startSlide.classList.add('switch_inactive');
         nextSlide.classList.remove('switch_inactive');
         lastSlide.classList.remove('switch_inactive');
         currentPage.textContent = numCurrentPage;
-    }
+    };
 
 carousel.addEventListener('click', openModalWindow);
 nextSlide.addEventListener('click', shiftSlideLeft);
 preSlide.addEventListener('click', shiftSlideRight);
 lastSlide.addEventListener('click', shiftSlideLast);
-startSlide.addEventListener('click',shiftSlideStart)
+startSlide.addEventListener('click', shiftSlideStart);
 
 
