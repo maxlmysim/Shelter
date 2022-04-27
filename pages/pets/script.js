@@ -158,7 +158,7 @@ function random(length) {
         let subList = [];
         while (subList.length < 8) {
             let number = Math.floor(Math.random() * listPets.length);
-            if (!check.slice(-6).includes(number) &&
+            if (!check.slice(-5).includes(number) &&
                 !subList.includes(number)) {
                 subList.push(number);
                 check.push(number);
